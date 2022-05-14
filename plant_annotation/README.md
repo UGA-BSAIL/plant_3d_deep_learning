@@ -12,9 +12,14 @@
 #### Notes
 
 - PlantCloud shortcut on desktop can be deleted as it is not useful.
+
 - When running the PlantCloud software, the open window should remain the original size. 
 
-#### Comments and suggestions:
+- Save the annotations after every small annotation. (Just in case the software get stuck. There have been only rare cases so far.)
+
+- Input file format is x y z r g b in text file (can be obtained from cloudcompare).
+
+#### Feedback and inquiry:
 - Readers are encouraged to add new feature requests, bugs, improvements, comments, suggestions,and questions in issue tab.
 
 Best regards!!
