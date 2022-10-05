@@ -1,5 +1,5 @@
 ###### licence 
-- (MIT License) + Only for use with agricultural and medical datasets. 
+- Only for use with agricultural and medical datasets. 
 - Can be used for other domains with permission.
 
 ### Plant annotation
