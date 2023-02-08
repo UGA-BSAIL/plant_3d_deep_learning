@@ -5,6 +5,9 @@
 - [Pointnet++](https://github.com/UGA-BSAIL/plant_3d_deep_learning/tree/main/plant_part_segmentation/pointnet_pointnetpp_pvcnn#pointnet-1)
 - [Point-voxel CNN](https://github.com/UGA-BSAIL/plant_3d_deep_learning/tree/main/plant_part_segmentation/pointnet_pointnetpp_pvcnn#point-voxel-cnn)
 
+### PlantCloud annotation tool
+- [PlantCloud](https://github.com/UGA-BSAIL/plant_3d_deep_learning/tree/main/plant_annotation)
+
 
 #### Acknowledgement
 
