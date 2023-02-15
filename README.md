@@ -8,6 +8,8 @@
 ### PlantCloud annotation tool
 - [PlantCloud](https://github.com/UGA-BSAIL/plant_3d_deep_learning/tree/main/plant_annotation)
 
+### Cotton Plant part segmentation LiDAR dataset
+- [dataset] (https://doi.org/10.25739/vnr9-xt59)
 
 #### Acknowledgement
 
