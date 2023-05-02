@@ -1,0 +1,105 @@
+--------------------------------------------------------------------------
+A process has executed an operation involving a call to the
+"fork()" system call to create a child process.  Open MPI is currently
+operating in a condition that could result in memory corruption or
+other system errors; your job may hang, crash, or produce silent
+data corruption.  The use of fork() (or system() or other calls that
+create child processes) is strongly discouraged.
+
+The process that invoked fork was:
+
+  Local host:          [[45878,1],0] (PID 97212)
+
+If you are *absolutely sure* that your application will successfully
+and correctly survive a call to fork(), you may disable this warning
+by setting the mpi_warn_on_fork MCA parameter to 0.
+--------------------------------------------------------------------------
+==> loading configs from ['configs/shapenet/pointnet.py']
+/apps/eb/PyTorch/1.6.0-fosscuda-2019b-Python-3.7.4/lib/python3.7/site-packages/torch/utils/cpp_extension.py:252: UserWarning: 
+
+                               !! WARNING !!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Your compiler (c++) is not compatible with the compiler Pytorch was
+built with for this platform, which is g++ on linux. Please
+use g++ to to compile your extension. Alternatively, you may
+compile PyTorch from source using c++, and then you can also use
+c++ to compile your extension.
+
+See https://github.com/pytorch/pytorch/blob/master/CONTRIBUTING.md for help
+with compiling PyTorch from source.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+                              !! WARNING !!
+
+  platform=sys.platform))
+eval:   0% 0/403 [00:00<?, ?it/s]eval:   0% 1/403 [00:02<14:32,  2.17s/it]eval:   0% 2/403 [00:02<10:47,  1.62s/it]eval:   1% 3/403 [00:02<08:00,  1.20s/it]eval:   1% 4/403 [00:03<06:19,  1.05it/s]eval:   1% 5/403 [00:03<04:45,  1.39it/s]eval:   1% 6/403 [00:03<03:35,  1.84it/s]eval:   2% 7/403 [00:03<03:04,  2.15it/s]eval:   2% 8/403 [00:03<02:33,  2.57it/s]eval:   2% 9/403 [00:04<02:02,  3.22it/s]eval:   3% 11/403 [00:04<01:37,  4.03it/s]eval:   3% 12/403 [00:04<01:38,  3.98it/s]eval:   3% 14/403 [00:04<01:18,  4.92it/s]eval:   4% 16/403 [00:04<01:13,  5.25it/s]eval:   4% 18/403 [00:05<01:01,  6.30it/s]eval:   5% 19/403 [00:05<01:38,  3.92it/s]eval:   5% 20/403 [00:05<01:23,  4.61it/s]eval:   5% 21/403 [00:05<01:11,  5.38it/s]eval:   5% 22/403 [00:06<01:08,  5.57it/s]eval:   6% 23/403 [00:06<01:08,  5.52it/s]eval:   6% 24/403 [00:06<01:13,  5.15it/s]eval:   6% 26/403 [00:06<00:57,  6.52it/s]eval:   7% 27/403 [00:06<00:55,  6.81it/s]eval:   7% 28/403 [00:07<01:47,  3.50it/s]eval:   7% 29/403 [00:07<02:12,  2.83it/s]eval:   8% 31/403 [00:08<01:44,  3.57it/s]eval:   8% 32/403 [00:08<01:38,  3.76it/s]eval:   8% 33/403 [00:08<01:20,  4.60it/s]eval:   9% 35/403 [00:08<01:06,  5.57it/s]eval:   9% 36/403 [00:08<01:05,  5.57it/s]eval:   9% 38/403 [00:08<00:52,  6.96it/s]eval:  10% 40/403 [00:08<00:43,  8.30it/s]eval:  10% 42/403 [00:09<00:45,  8.01it/s]eval:  11% 44/403 [00:09<00:44,  8.16it/s]eval:  11% 46/403 [00:09<00:37,  9.45it/s]eval:  12% 48/403 [00:09<00:32, 11.00it/s]eval:  12% 50/403 [00:09<00:29, 12.09it/s]eval:  13% 52/403 [00:10<00:29, 12.08it/s]eval:  13% 54/403 [00:10<00:32, 10.81it/s]eval:  14% 56/403 [00:10<00:30, 11.44it/s]eval:  14% 58/403 [00:10<00:34,  9.98it/s]eval:  15% 60/403 [00:10<00:32, 10.66it/s]eval:  15% 62/403 [00:11<00:32, 10.56it/s]eval:  16% 64/403 [00:11<00:31, 10.81it/s]eval:  16% 66/403 [00:11<00:29, 11.28it/s]eval:  17% 68/403 [00:11<00:28, 11.74it/s]eval:  17% 70/403 [00:11<00:34,  9.64it/s]eval:  18% 72/403 [00:11<00:31, 10.47it/s]eval:  18% 74/403 [00:12<00:36,  8.96it/s]eval:  19% 75/403 [00:12<01:01,  5.29it/s]eval:  19% 76/403 [00:12<01:01,  5.27it/s]eval:  19% 78/403 [00:13<00:53,  6.06it/s]eval:  20% 80/403 [00:13<00:48,  6.61it/s]eval:  20% 82/403 [00:13<00:45,  7.07it/s]eval:  21% 83/403 [00:13<00:43,  7.28it/s]eval:  21% 84/403 [00:14<01:09,  4.58it/s]eval:  21% 86/403 [00:14<00:57,  5.55it/s]eval:  22% 88/403 [00:14<00:47,  6.61it/s]eval:  22% 90/403 [00:14<00:38,  8.10it/s]eval:  23% 92/403 [00:14<00:32,  9.48it/s]eval:  23% 94/403 [00:14<00:27, 11.05it/s]eval:  24% 96/403 [00:15<00:31,  9.81it/s]eval:  24% 98/403 [00:15<00:28, 10.68it/s]eval:  25% 100/403 [00:15<00:25, 11.97it/s]eval:  25% 102/403 [00:15<00:25, 11.89it/s]eval:  26% 105/403 [00:15<00:21, 13.70it/s]eval:  27% 107/403 [00:15<00:25, 11.57it/s]eval:  27% 109/403 [00:16<00:27, 10.82it/s]eval:  28% 111/403 [00:16<00:28, 10.35it/s]eval:  28% 113/403 [00:16<00:25, 11.39it/s]eval:  29% 115/403 [00:16<00:32,  8.83it/s]eval:  29% 117/403 [00:16<00:33,  8.60it/s]eval:  29% 118/403 [00:17<00:39,  7.23it/s]eval:  30% 120/403 [00:17<00:33,  8.36it/s]eval:  30% 122/403 [00:17<00:28,  9.89it/s]eval:  31% 124/403 [00:17<00:37,  7.54it/s]eval:  31% 125/403 [00:17<00:36,  7.68it/s]eval:  32% 127/403 [00:18<00:29,  9.31it/s]eval:  32% 129/403 [00:18<00:28,  9.51it/s]eval:  33% 131/403 [00:18<00:27,  9.95it/s]eval:  33% 133/403 [00:18<00:27,  9.91it/s]eval:  33% 135/403 [00:18<00:25, 10.59it/s]eval:  34% 137/403 [00:19<00:25, 10.53it/s]eval:  34% 139/403 [00:19<00:25, 10.19it/s]eval:  35% 141/403 [00:19<00:34,  7.67it/s]eval:  35% 142/403 [00:19<00:40,  6.39it/s]eval:  35% 143/403 [00:20<00:40,  6.48it/s]eval:  36% 144/403 [00:20<00:37,  6.88it/s]eval:  36% 146/403 [00:20<00:32,  7.91it/s]eval:  37% 148/403 [00:20<00:27,  9.21it/s]eval:  37% 150/403 [00:20<00:23, 10.59it/s]eval:  38% 152/403 [00:20<00:26,  9.42it/s]eval:  38% 154/403 [00:20<00:24, 10.19it/s]eval:  39% 156/403 [00:21<00:27,  8.91it/s]eval:  39% 158/403 [00:21<00:26,  9.08it/s]eval:  40% 160/403 [00:21<00:23, 10.54it/s]eval:  40% 162/403 [00:21<00:22, 10.78it/s]eval:  41% 164/403 [00:21<00:20, 11.39it/s]eval:  41% 166/403 [00:22<00:19, 12.07it/s]eval:  42% 168/403 [00:22<00:18, 12.59it/s]eval:  42% 170/403 [00:22<00:19, 12.03it/s]eval:  43% 173/403 [00:22<00:16, 13.80it/s]eval:  43% 175/403 [00:22<00:19, 11.68it/s]eval:  44% 177/403 [00:22<00:18, 12.17it/s]eval:  44% 179/403 [00:23<00:19, 11.23it/s]eval:  45% 181/403 [00:23<00:20, 11.07it/s]eval:  45% 183/403 [00:23<00:17, 12.69it/s]eval:  46% 185/403 [00:23<00:23,  9.30it/s]eval:  46% 187/403 [00:24<00:26,  8.02it/s]eval:  47% 188/403 [00:24<00:26,  8.21it/s]eval:  47% 190/403 [00:24<00:22,  9.34it/s]eval:  48% 192/403 [00:24<00:20, 10.13it/s]eval:  48% 194/403 [00:25<00:32,  6.35it/s]eval:  49% 196/403 [00:25<00:47,  4.36it/s]eval:  49% 197/403 [00:26<01:08,  3.02it/s]eval:  49% 198/403 [00:26<01:12,  2.83it/s]eval:  49% 199/403 [00:27<01:22,  2.49it/s]eval:  50% 200/403 [00:27<01:14,  2.71it/s]eval:  50% 201/403 [00:27<01:03,  3.17it/s]eval:  50% 203/403 [00:28<00:50,  4.00it/s]eval:  51% 204/403 [00:28<00:40,  4.86it/s]eval:  51% 206/403 [00:28<00:31,  6.18it/s]eval:  52% 208/403 [00:28<00:30,  6.34it/s]eval:  52% 209/403 [00:29<00:54,  3.55it/s]eval:  52% 210/403 [00:29<00:46,  4.19it/s]eval:  52% 211/403 [00:29<00:42,  4.48it/s]eval:  53% 212/403 [00:29<00:43,  4.37it/s]eval:  53% 213/403 [00:30<00:46,  4.08it/s]eval:  53% 215/403 [00:30<00:36,  5.17it/s]eval:  54% 217/403 [00:30<00:33,  5.60it/s]eval:  54% 219/403 [00:30<00:28,  6.49it/s]eval:  55% 222/403 [00:30<00:23,  7.84it/s]eval:  56% 224/403 [00:31<00:24,  7.34it/s]eval:  56% 226/403 [00:31<00:22,  7.73it/s]eval:  57% 228/403 [00:31<00:25,  6.82it/s]eval:  57% 229/403 [00:31<00:27,  6.29it/s]eval:  57% 230/403 [00:32<00:40,  4.29it/s]eval:  57% 231/403 [00:32<00:39,  4.32it/s]eval:  58% 233/403 [00:32<00:30,  5.58it/s]eval:  58% 234/403 [00:32<00:34,  4.86it/s]eval:  59% 237/403 [00:33<00:26,  6.25it/s]eval:  59% 239/403 [00:33<00:23,  6.89it/s]eval:  60% 241/403 [00:33<00:24,  6.62it/s]eval:  60% 242/403 [00:33<00:24,  6.50it/s]eval:  60% 243/403 [00:34<00:26,  6.06it/s]eval:  61% 244/403 [00:34<00:23,  6.74it/s]eval:  61% 245/403 [00:34<00:35,  4.47it/s]eval:  61% 246/403 [00:34<00:29,  5.33it/s]eval:  62% 248/403 [00:34<00:23,  6.56it/s]eval:  62% 250/403 [00:35<00:27,  5.59it/s]eval:  63% 252/403 [00:35<00:29,  5.10it/s]eval:  63% 253/403 [00:35<00:27,  5.40it/s]eval:  63% 254/403 [00:35<00:23,  6.26it/s]eval:  64% 256/403 [00:36<00:20,  7.10it/s]eval:  64% 259/403 [00:36<00:19,  7.36it/s]eval:  65% 261/403 [00:36<00:16,  8.82it/s]eval:  65% 263/403 [00:36<00:15,  8.87it/s]eval:  66% 265/403 [00:37<00:14,  9.53it/s]eval:  66% 267/403 [00:37<00:14,  9.61it/s]eval:  67% 269/403 [00:37<00:17,  7.88it/s]eval:  67% 270/403 [00:37<00:16,  7.88it/s]eval:  67% 272/403 [00:37<00:15,  8.72it/s]eval:  68% 273/403 [00:38<00:25,  5.02it/s]eval:  68% 274/403 [00:38<00:25,  5.08it/s]eval:  68% 276/403 [00:38<00:19,  6.41it/s]eval:  69% 277/403 [00:39<00:29,  4.23it/s]eval:  69% 278/403 [00:39<00:29,  4.31it/s]eval:  69% 280/403 [00:39<00:26,  4.63it/s]eval:  70% 281/403 [00:40<00:38,  3.17it/s]eval:  70% 282/403 [00:40<00:37,  3.19it/s]eval:  70% 283/403 [00:40<00:33,  3.53it/s]eval:  70% 284/403 [00:41<01:01,  1.95it/s]eval:  71% 285/403 [00:41<00:46,  2.55it/s]eval:  71% 287/403 [00:42<00:38,  3.05it/s]eval:  71% 288/403 [00:42<00:31,  3.65it/s]eval:  72% 291/403 [00:43<00:31,  3.59it/s]eval:  73% 293/403 [00:43<00:26,  4.10it/s]eval:  73% 294/403 [00:43<00:32,  3.40it/s]eval:  73% 296/403 [00:44<00:24,  4.44it/s]eval:  74% 297/403 [00:44<00:19,  5.31it/s]eval:  74% 299/403 [00:44<00:20,  5.08it/s]eval:  75% 301/403 [00:44<00:17,  5.70it/s]eval:  75% 302/403 [00:45<00:33,  3.00it/s]eval:  75% 303/403 [00:45<00:29,  3.43it/s]eval:  76% 305/403 [00:46<00:25,  3.87it/s]eval:  76% 306/403 [00:46<00:20,  4.68it/s]eval:  76% 308/403 [00:46<00:15,  6.07it/s]eval:  77% 310/403 [00:46<00:16,  5.68it/s]eval:  77% 312/403 [00:47<00:15,  5.87it/s]eval:  78% 313/403 [00:47<00:21,  4.15it/s]eval:  78% 314/403 [00:47<00:26,  3.40it/s]eval:  78% 315/403 [00:48<00:22,  3.89it/s]eval:  78% 316/403 [00:48<00:20,  4.30it/s]eval:  79% 317/403 [00:48<00:17,  4.99it/s]eval:  79% 319/403 [00:48<00:14,  5.73it/s]eval:  79% 320/403 [00:48<00:18,  4.45it/s]eval:  80% 321/403 [00:49<00:20,  4.02it/s]eval:  80% 322/403 [00:49<00:19,  4.20it/s]eval:  80% 324/403 [00:49<00:15,  5.02it/s]eval:  81% 325/403 [00:50<00:18,  4.18it/s]eval:  81% 326/403 [00:50<00:18,  4.20it/s]eval:  81% 328/403 [00:50<00:16,  4.54it/s]eval:  82% 329/403 [00:50<00:15,  4.93it/s]eval:  82% 330/403 [00:50<00:13,  5.27it/s]eval:  82% 332/403 [00:51<00:11,  6.35it/s]eval:  83% 333/403 [00:51<00:10,  6.72it/s]eval:  83% 334/403 [00:52<00:24,  2.82it/s]eval:  83% 335/403 [00:52<00:21,  3.14it/s]eval:  83% 336/403 [00:52<00:21,  3.07it/s]eval:  84% 338/403 [00:52<00:16,  3.83it/s]eval:  84% 339/403 [00:53<00:14,  4.41it/s]eval:  84% 340/403 [00:53<00:15,  4.18it/s]eval:  85% 341/403 [00:53<00:18,  3.38it/s]eval:  85% 343/403 [00:53<00:13,  4.31it/s]eval:  86% 345/403 [00:54<00:12,  4.81it/s]eval:  86% 346/403 [00:54<00:12,  4.54it/s]eval:  86% 347/403 [00:54<00:12,  4.65it/s]eval:  86% 348/403 [00:54<00:13,  3.97it/s]eval:  87% 349/403 [00:55<00:15,  3.43it/s]eval:  87% 350/403 [00:55<00:12,  4.25it/s]eval:  87% 351/403 [00:55<00:11,  4.73it/s]eval:  87% 352/403 [00:55<00:10,  4.91it/s]eval:  88% 353/403 [00:56<00:11,  4.44it/s]eval:  88% 355/403 [00:56<00:08,  5.34it/s]eval:  89% 357/403 [00:56<00:07,  6.10it/s]eval:  89% 359/403 [00:56<00:08,  5.46it/s]eval:  89% 360/403 [00:57<00:06,  6.23it/s]eval:  90% 362/403 [00:57<00:06,  6.65it/s]eval:  90% 363/403 [00:57<00:06,  5.82it/s]eval:  90% 364/403 [00:57<00:08,  4.70it/s]eval:  91% 366/403 [00:57<00:06,  6.02it/s]eval:  91% 367/403 [00:58<00:05,  6.44it/s]eval:  92% 370/403 [00:58<00:04,  7.29it/s]eval:  92% 371/403 [00:58<00:04,  6.62it/s]eval:  93% 373/403 [00:58<00:03,  7.52it/s]eval:  93% 374/403 [00:59<00:06,  4.35it/s]eval:  93% 375/403 [00:59<00:05,  4.84it/s]eval:  93% 376/403 [00:59<00:05,  4.76it/s]eval:  94% 377/403 [00:59<00:05,  4.89it/s]eval:  94% 378/403 [00:59<00:04,  5.03it/s]eval:  94% 379/403 [01:00<00:04,  4.89it/s]eval:  94% 380/403 [01:00<00:05,  4.16it/s]eval:  95% 381/403 [01:00<00:05,  4.07it/s]eval:  95% 382/403 [01:01<00:05,  3.60it/s]eval:  95% 383/403 [01:01<00:06,  3.21it/s]eval:  95% 384/403 [01:01<00:05,  3.41it/s]eval:  96% 385/403 [01:01<00:04,  4.05it/s]eval:  96% 386/403 [01:02<00:03,  4.41it/s]eval:  96% 387/403 [01:02<00:04,  3.57it/s]eval:  96% 388/403 [01:02<00:03,  4.11it/s]eval:  97% 390/403 [01:02<00:02,  5.26it/s]eval:  97% 391/403 [01:02<00:02,  5.81it/s]eval:  98% 393/403 [01:03<00:01,  6.12it/s]eval:  98% 394/403 [01:03<00:01,  5.70it/s]eval:  98% 396/403 [01:03<00:01,  5.14it/s]eval:  99% 398/403 [01:03<00:00,  6.58it/s]eval:  99% 399/403 [01:04<00:00,  5.40it/s]eval: 100% 401/403 [01:04<00:00,  6.45it/s]eval: 100% 402/403 [01:04<00:00,  7.07it/s]eval: 100% 403/403 [01:04<00:00,  6.24it/s]
+[seed] = 1588147245
+[deterministic] = False
+[data]
+  [num_workers] = 16
+  [num_classes] = 3
+  [num_shapes] = 1
+[dataset]
+  [func] = <class 'datasets.shapenet.ShapeNet'>
+  [root] = /scratch/fs47816/point_cloud_data/plant_data
+  [with_normal] = False
+  [with_one_hot_shape_id] = True
+  [normalize] = True
+  [jitter] = True
+  [num_points] = 2048
+  [split] = test
+[evaluate]
+  [fn] = <function evaluate at 0x2aad9cb1f710>
+  [num_votes] = 1
+  [dataset]
+    [split] = test
+  [best_checkpoint_path] = runs/shapenet.pointnet/best.pth.tar
+  [predictions_path] = runs/shapenet.pointnet/best.predictions
+  [stats_path] = runs/shapenet.pointnet/best.eval.npy
+[train]
+  [num_epochs] = 500
+  [batch_size] = 32
+  [meters]
+    [acc/iou_{}]
+      [func] = <class 'meters.shapenet.MeterShapeNet'>
+      [num_classes] = 3
+  [metric] = acc/iou_test
+  [criterion]
+    [func] = <class 'torch.nn.modules.loss.CrossEntropyLoss'>
+  [optimizer]
+    [func] = <class 'torch.optim.adam.Adam'>
+    [lr] = 0.001
+  [scheduler]
+    [func] = <class 'torch.optim.lr_scheduler.StepLR'>
+    [step_size] = 20
+    [gamma] = 0.5
+  [save_path] = runs/shapenet.pointnet
+[model]
+  [func] = <class 'models.shapenet.pointnet.PointNet'>
+  [num_classes] = 3
+  [num_shapes] = 1
+  [extra_feature_channels] = 0
+[device] = cuda
+[device_ids] = [0]
+
+==> loading dataset "[func] = <class 'datasets.shapenet.ShapeNet'>
+[root] = /scratch/fs47816/point_cloud_data/plant_data
+[with_normal] = False
+[with_one_hot_shape_id] = True
+[normalize] = True
+[jitter] = True
+[num_points] = 2048
+[split] = test"
+
+==> creating model "[func] = <class 'models.shapenet.pointnet.PointNet'>
+[num_classes] = 3
+[num_shapes] = 1
+[extra_feature_channels] = 0"
+==> loading checkpoint "runs/shapenet.pointnet/best.pth.tar"
+shapeIoU:    63.93
+clssPrec:    91.30     64.11     81.68
+clssRecall:    87.51     64.68     83.04
+clssIoU:    79.81     42.81     69.18
+Accuracy: 75.83
+meanIoU: 63.93

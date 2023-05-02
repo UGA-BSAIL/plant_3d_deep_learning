@@ -1,0 +1,399 @@
+--------------------------------------------------------------------------
+A process has executed an operation involving a call to the
+"fork()" system call to create a child process.  Open MPI is currently
+operating in a condition that could result in memory corruption or
+other system errors; your job may hang, crash, or produce silent
+data corruption.  The use of fork() (or system() or other calls that
+create child processes) is strongly discouraged.
+
+The process that invoked fork was:
+
+  Local host:          [[55468,1],0] (PID 69662)
+
+If you are *absolutely sure* that your application will successfully
+and correctly survive a call to fork(), you may disable this warning
+by setting the mpi_warn_on_fork MCA parameter to 0.
+--------------------------------------------------------------------------
+==> loading configs from ['configs/shapenet/pvcnn/c1.py']
+/apps/eb/PyTorch/1.6.0-fosscuda-2019b-Python-3.7.4/lib/python3.7/site-packages/torch/utils/cpp_extension.py:252: UserWarning: 
+
+                               !! WARNING !!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Your compiler (c++) is not compatible with the compiler Pytorch was
+built with for this platform, which is g++ on linux. Please
+use g++ to to compile your extension. Alternatively, you may
+compile PyTorch from source using c++, and then you can also use
+c++ to compile your extension.
+
+See https://github.com/pytorch/pytorch/blob/master/CONTRIBUTING.md for help
+with compiling PyTorch from source.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+                              !! WARNING !!
+
+  platform=sys.platform))
+2022-08-23 08:38:24.335863: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+[seed] = 1588147245
+[deterministic] = False
+[data]
+  [num_workers] = 16
+  [num_classes] = 3
+  [num_shapes] = 1
+[dataset]
+  [func] = <class 'datasets.shapenet.ShapeNet'>
+  [root] = /scratch/fs47816/point_cloud_data/shapenetcore_partanno_segmentation_benchmark_v0_normal
+  [with_normal] = False
+  [with_one_hot_shape_id] = True
+  [normalize] = True
+  [jitter] = False
+  [num_points] = 100000
+[evaluate] = None
+[train]
+  [num_epochs] = 200
+  [batch_size] = 1
+  [meters]
+    [acc/iou_{}]
+      [func] = <class 'meters.shapenet.MeterShapeNet'>
+      [num_classes] = 3
+  [metric] = acc/iou_test
+  [criterion]
+    [func] = <class 'torch.nn.modules.loss.CrossEntropyLoss'>
+  [optimizer]
+    [func] = <class 'torch.optim.adam.Adam'>
+    [lr] = 0.001
+  [scheduler]
+    [func] = <class 'torch.optim.lr_scheduler.CosineAnnealingLR'>
+    [T_max] = 200
+  [save_path] = runs/shapenet.pvcnn.c1
+  [metrics] = ['acc/iou_test']
+  [checkpoint_path] = runs/shapenet.pvcnn.c1/latest.pth.tar
+  [checkpoints_path] = runs/shapenet.pvcnn.c1/latest/e{}.pth.tar
+  [best_checkpoint_path] = runs/shapenet.pvcnn.c1/best.pth.tar
+  [best_checkpoint_paths] = {'acc/iou_test': 'runs/shapenet.pvcnn.c1/best/best.acc.iou_test.pth.tar'}
+[model]
+  [func] = <class 'models.shapenet.pvcnn.PVCNN'>
+  [num_classes] = 3
+  [num_shapes] = 1
+  [extra_feature_channels] = 0
+[device] = cuda
+[device_ids] = [0]
+
+==> loading dataset "[func] = <class 'datasets.shapenet.ShapeNet'>
+[root] = /scratch/fs47816/point_cloud_data/shapenetcore_partanno_segmentation_benchmark_v0_normal
+[with_normal] = False
+[with_one_hot_shape_id] = True
+[normalize] = True
+[jitter] = False
+[num_points] = 100000"
+
+==> creating model "[func] = <class 'models.shapenet.pvcnn.PVCNN'>
+[num_classes] = 3
+[num_shapes] = 1
+[extra_feature_channels] = 0"
+############################## bigger network: 
+############################################ row:  0 ## in_channels:  3 #### out_channels:  32
+############################################ row:  0 ## in_channels:  3 #### out_channels:  64
+############################################ row:  0 ## in_channels:  3 #### out_channels:  128
+############################################ row:  0 ## in_channels:  3 #### out_channels:  256
+############################################ row:  0 ## in_channels:  3 #### out_channels:  512
+############################### PRINTING BEFORE
+################ i : 0 ########## j:  0  ##### self.layer_ops[i][j].in_channels 3 #### self.layer_ops[i][j].out_channels 32
+################ i : 0 ########## j:  1  ##### self.layer_ops[i][j].in_channels 3 #### self.layer_ops[i][j].out_channels 64
+################ i : 0 ########## j:  2  ##### self.layer_ops[i][j].in_channels 3 #### self.layer_ops[i][j].out_channels 128
+################ i : 0 ########## j:  3  ##### self.layer_ops[i][j].in_channels 3 #### self.layer_ops[i][j].out_channels 256
+################ i : 0 ########## j:  4  ##### self.layer_ops[i][j].in_channels 3 #### self.layer_ops[i][j].out_channels 512
+############################################ row:  1 ## in_channels:  32 #### out_channels:  32
+############################################ row:  1 ## in_channels:  32 #### out_channels:  64
+############################################ row:  1 ## in_channels:  32 #### out_channels:  128
+############################################ row:  1 ## in_channels:  32 #### out_channels:  256
+############################################ row:  1 ## in_channels:  32 #### out_channels:  512
+############################################ row:  1 ## in_channels:  64 #### out_channels:  32
+############################################ row:  1 ## in_channels:  64 #### out_channels:  64
+############################################ row:  1 ## in_channels:  64 #### out_channels:  128
+############################################ row:  1 ## in_channels:  64 #### out_channels:  256
+############################################ row:  1 ## in_channels:  64 #### out_channels:  512
+############################################ row:  1 ## in_channels:  128 #### out_channels:  32
+############################################ row:  1 ## in_channels:  128 #### out_channels:  64
+############################################ row:  1 ## in_channels:  128 #### out_channels:  128
+############################################ row:  1 ## in_channels:  128 #### out_channels:  256
+############################################ row:  1 ## in_channels:  128 #### out_channels:  512
+############################################ row:  1 ## in_channels:  256 #### out_channels:  32
+############################################ row:  1 ## in_channels:  256 #### out_channels:  64
+############################################ row:  1 ## in_channels:  256 #### out_channels:  128
+############################################ row:  1 ## in_channels:  256 #### out_channels:  256
+############################################ row:  1 ## in_channels:  256 #### out_channels:  512
+############################################ row:  1 ## in_channels:  512 #### out_channels:  32
+############################################ row:  1 ## in_channels:  512 #### out_channels:  64
+############################################ row:  1 ## in_channels:  512 #### out_channels:  128
+############################################ row:  1 ## in_channels:  512 #### out_channels:  256
+############################################ row:  1 ## in_channels:  512 #### out_channels:  512
+############################################ row:  2 ## in_channels:  32 #### out_channels:  32
+############################################ row:  2 ## in_channels:  32 #### out_channels:  64
+############################################ row:  2 ## in_channels:  32 #### out_channels:  128
+############################################ row:  2 ## in_channels:  32 #### out_channels:  256
+############################################ row:  2 ## in_channels:  32 #### out_channels:  512
+############################################ row:  2 ## in_channels:  64 #### out_channels:  32
+############################################ row:  2 ## in_channels:  64 #### out_channels:  64
+############################################ row:  2 ## in_channels:  64 #### out_channels:  128
+############################################ row:  2 ## in_channels:  64 #### out_channels:  256
+############################################ row:  2 ## in_channels:  64 #### out_channels:  512
+############################################ row:  2 ## in_channels:  128 #### out_channels:  32
+############################################ row:  2 ## in_channels:  128 #### out_channels:  64
+############################################ row:  2 ## in_channels:  128 #### out_channels:  128
+############################################ row:  2 ## in_channels:  128 #### out_channels:  256
+############################################ row:  2 ## in_channels:  128 #### out_channels:  512
+############################################ row:  2 ## in_channels:  256 #### out_channels:  32
+############################################ row:  2 ## in_channels:  256 #### out_channels:  64
+############################################ row:  2 ## in_channels:  256 #### out_channels:  128
+############################################ row:  2 ## in_channels:  256 #### out_channels:  256
+############################################ row:  2 ## in_channels:  256 #### out_channels:  512
+############################################ row:  2 ## in_channels:  512 #### out_channels:  32
+############################################ row:  2 ## in_channels:  512 #### out_channels:  64
+############################################ row:  2 ## in_channels:  512 #### out_channels:  128
+############################################ row:  2 ## in_channels:  512 #### out_channels:  256
+############################################ row:  2 ## in_channels:  512 #### out_channels:  512
+############################################ row:  3 ## in_channels:  32 #### out_channels:  32
+############################################ row:  3 ## in_channels:  32 #### out_channels:  64
+############################################ row:  3 ## in_channels:  32 #### out_channels:  128
+############################################ row:  3 ## in_channels:  32 #### out_channels:  256
+############################################ row:  3 ## in_channels:  32 #### out_channels:  512
+############################################ row:  3 ## in_channels:  64 #### out_channels:  32
+############################################ row:  3 ## in_channels:  64 #### out_channels:  64
+############################################ row:  3 ## in_channels:  64 #### out_channels:  128
+############################################ row:  3 ## in_channels:  64 #### out_channels:  256
+############################################ row:  3 ## in_channels:  64 #### out_channels:  512
+############################################ row:  3 ## in_channels:  128 #### out_channels:  32
+############################################ row:  3 ## in_channels:  128 #### out_channels:  64
+############################################ row:  3 ## in_channels:  128 #### out_channels:  128
+############################################ row:  3 ## in_channels:  128 #### out_channels:  256
+############################################ row:  3 ## in_channels:  128 #### out_channels:  512
+############################################ row:  3 ## in_channels:  256 #### out_channels:  32
+############################################ row:  3 ## in_channels:  256 #### out_channels:  64
+############################################ row:  3 ## in_channels:  256 #### out_channels:  128
+############################################ row:  3 ## in_channels:  256 #### out_channels:  256
+############################################ row:  3 ## in_channels:  256 #### out_channels:  512
+############################################ row:  3 ## in_channels:  512 #### out_channels:  32
+############################################ row:  3 ## in_channels:  512 #### out_channels:  64
+############################################ row:  3 ## in_channels:  512 #### out_channels:  128
+############################################ row:  3 ## in_channels:  512 #### out_channels:  256
+############################################ row:  3 ## in_channels:  512 #### out_channels:  512
+############################################ row:  4 ## in_channels:  32 #### out_channels:  32
+############################################ row:  4 ## in_channels:  32 #### out_channels:  64
+############################################ row:  4 ## in_channels:  32 #### out_channels:  128
+############################################ row:  4 ## in_channels:  32 #### out_channels:  256
+############################################ row:  4 ## in_channels:  32 #### out_channels:  512
+############################################ row:  4 ## in_channels:  64 #### out_channels:  32
+############################################ row:  4 ## in_channels:  64 #### out_channels:  64
+############################################ row:  4 ## in_channels:  64 #### out_channels:  128
+############################################ row:  4 ## in_channels:  64 #### out_channels:  256
+############################################ row:  4 ## in_channels:  64 #### out_channels:  512
+############################################ row:  4 ## in_channels:  128 #### out_channels:  32
+############################################ row:  4 ## in_channels:  128 #### out_channels:  64
+############################################ row:  4 ## in_channels:  128 #### out_channels:  128
+############################################ row:  4 ## in_channels:  128 #### out_channels:  256
+############################################ row:  4 ## in_channels:  128 #### out_channels:  512
+############################################ row:  4 ## in_channels:  256 #### out_channels:  32
+############################################ row:  4 ## in_channels:  256 #### out_channels:  64
+############################################ row:  4 ## in_channels:  256 #### out_channels:  128
+############################################ row:  4 ## in_channels:  256 #### out_channels:  256
+############################################ row:  4 ## in_channels:  256 #### out_channels:  512
+############################################ row:  4 ## in_channels:  512 #### out_channels:  32
+############################################ row:  4 ## in_channels:  512 #### out_channels:  64
+############################################ row:  4 ## in_channels:  512 #### out_channels:  128
+############################################ row:  4 ## in_channels:  512 #### out_channels:  256
+############################################ row:  4 ## in_channels:  512 #### out_channels:  512
+############################### PRINTING
+################ i : 0 ########## j:  0  ##### self.layer_ops[i][j].in_channels 3 #### self.layer_ops[i][j].out_channels 32
+################ i : 0 ########## j:  1  ##### self.layer_ops[i][j].in_channels 3 #### self.layer_ops[i][j].out_channels 64
+################ i : 0 ########## j:  2  ##### self.layer_ops[i][j].in_channels 3 #### self.layer_ops[i][j].out_channels 128
+################ i : 0 ########## j:  3  ##### self.layer_ops[i][j].in_channels 3 #### self.layer_ops[i][j].out_channels 256
+################ i : 0 ########## j:  4  ##### self.layer_ops[i][j].in_channels 3 #### self.layer_ops[i][j].out_channels 512
+################ i : 1 ########## j:  0  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 32
+################ i : 1 ########## j:  1  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 64
+################ i : 1 ########## j:  2  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 128
+################ i : 1 ########## j:  3  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 256
+################ i : 1 ########## j:  4  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 512
+################ i : 1 ########## j:  5  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 32
+################ i : 1 ########## j:  6  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 64
+################ i : 1 ########## j:  7  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 128
+################ i : 1 ########## j:  8  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 256
+################ i : 1 ########## j:  9  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 512
+################ i : 1 ########## j:  10  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 32
+################ i : 1 ########## j:  11  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 64
+################ i : 1 ########## j:  12  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 128
+################ i : 1 ########## j:  13  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 256
+################ i : 1 ########## j:  14  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 512
+################ i : 1 ########## j:  15  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 32
+################ i : 1 ########## j:  16  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 64
+################ i : 1 ########## j:  17  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 128
+################ i : 1 ########## j:  18  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 256
+################ i : 1 ########## j:  19  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 512
+################ i : 1 ########## j:  20  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 32
+################ i : 1 ########## j:  21  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 64
+################ i : 1 ########## j:  22  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 128
+################ i : 1 ########## j:  23  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 256
+################ i : 1 ########## j:  24  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 512
+################ i : 2 ########## j:  0  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 32
+################ i : 2 ########## j:  1  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 64
+################ i : 2 ########## j:  2  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 128
+################ i : 2 ########## j:  3  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 256
+################ i : 2 ########## j:  4  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 512
+################ i : 2 ########## j:  5  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 32
+################ i : 2 ########## j:  6  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 64
+################ i : 2 ########## j:  7  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 128
+################ i : 2 ########## j:  8  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 256
+################ i : 2 ########## j:  9  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 512
+################ i : 2 ########## j:  10  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 32
+################ i : 2 ########## j:  11  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 64
+################ i : 2 ########## j:  12  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 128
+################ i : 2 ########## j:  13  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 256
+################ i : 2 ########## j:  14  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 512
+################ i : 2 ########## j:  15  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 32
+################ i : 2 ########## j:  16  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 64
+################ i : 2 ########## j:  17  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 128
+################ i : 2 ########## j:  18  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 256
+################ i : 2 ########## j:  19  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 512
+################ i : 2 ########## j:  20  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 32
+################ i : 2 ########## j:  21  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 64
+################ i : 2 ########## j:  22  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 128
+################ i : 2 ########## j:  23  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 256
+################ i : 2 ########## j:  24  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 512
+################ i : 3 ########## j:  0  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 32
+################ i : 3 ########## j:  1  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 64
+################ i : 3 ########## j:  2  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 128
+################ i : 3 ########## j:  3  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 256
+################ i : 3 ########## j:  4  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 512
+################ i : 3 ########## j:  5  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 32
+################ i : 3 ########## j:  6  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 64
+################ i : 3 ########## j:  7  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 128
+################ i : 3 ########## j:  8  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 256
+################ i : 3 ########## j:  9  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 512
+################ i : 3 ########## j:  10  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 32
+################ i : 3 ########## j:  11  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 64
+################ i : 3 ########## j:  12  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 128
+################ i : 3 ########## j:  13  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 256
+################ i : 3 ########## j:  14  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 512
+################ i : 3 ########## j:  15  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 32
+################ i : 3 ########## j:  16  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 64
+################ i : 3 ########## j:  17  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 128
+################ i : 3 ########## j:  18  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 256
+################ i : 3 ########## j:  19  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 512
+################ i : 3 ########## j:  20  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 32
+################ i : 3 ########## j:  21  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 64
+################ i : 3 ########## j:  22  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 128
+################ i : 3 ########## j:  23  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 256
+################ i : 3 ########## j:  24  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 512
+################ i : 4 ########## j:  0  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 32
+################ i : 4 ########## j:  1  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 64
+################ i : 4 ########## j:  2  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 128
+################ i : 4 ########## j:  3  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 256
+################ i : 4 ########## j:  4  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 512
+################ i : 4 ########## j:  5  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 32
+################ i : 4 ########## j:  6  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 64
+################ i : 4 ########## j:  7  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 128
+################ i : 4 ########## j:  8  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 256
+################ i : 4 ########## j:  9  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 512
+################ i : 4 ########## j:  10  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 32
+################ i : 4 ########## j:  11  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 64
+################ i : 4 ########## j:  12  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 128
+################ i : 4 ########## j:  13  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 256
+################ i : 4 ########## j:  14  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 512
+################ i : 4 ########## j:  15  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 32
+################ i : 4 ########## j:  16  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 64
+################ i : 4 ########## j:  17  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 128
+################ i : 4 ########## j:  18  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 256
+################ i : 4 ########## j:  19  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 512
+################ i : 4 ########## j:  20  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 32
+################ i : 4 ########## j:  21  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 64
+################ i : 4 ########## j:  22  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 128
+################ i : 4 ########## j:  23  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 256
+################ i : 4 ########## j:  24  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 512
+==> creating scheduler "[func] = <class 'torch.optim.lr_scheduler.CosineAnnealingLR'>
+[T_max] = 200
+[last_epoch] = -1"
+
+==> training epoch 0/200
+train:   0% 0/21 [00:00<?, ?it/s]train:   5% 1/21 [00:24<08:10, 24.55s/it]train:  10% 2/21 [00:29<04:08, 13.09s/it]train:  14% 3/21 [00:33<02:37,  8.76s/it]train:  19% 4/21 [00:34<01:38,  5.77s/it]train:  24% 5/21 [00:35<01:04,  4.03s/it]train:  29% 6/21 [00:39<01:00,  4.05s/it]train:  33% 7/21 [00:44<01:00,  4.30s/it]train:  38% 8/21 [00:47<00:52,  4.00s/it]train:  43% 9/21 [00:50<00:45,  3.76s/it]train:  48% 10/21 [00:53<00:36,  3.28s/it]train:  52% 11/21 [00:54<00:26,  2.63s/it]train:  57% 12/21 [00:57<00:24,  2.71s/it]train:  62% 13/21 [00:57<00:15,  1.95s/it]train:  67% 14/21 [00:58<00:11,  1.70s/it]train:  71% 15/21 [01:03<00:16,  2.80s/it]train:  76% 16/21 [01:07<00:15,  3.06s/it]train:  81% 17/21 [01:14<00:17,  4.33s/it]train:  86% 18/21 [01:14<00:09,  3.10s/it]train:  90% 19/21 [01:17<00:05,  2.84s/it]train:  95% 20/21 [01:18<00:02,  2.45s/it]train: 100% 21/21 [01:21<00:00,  2.67s/it]train: 100% 21/21 [01:22<00:00,  3.91s/it]
+############################################################################################# s_depth:  2
+############################################################################################# s_depth:  5
+############################################################################################# s_depth:  5
+############################################################################################# s_depth:  4
+############################################################################################# s_depth:  2
+############################################################################################# s_depth:  3
+############################################################################################# s_depth:  5
+############################################################################################# s_depth:  3
+############################################################################################# s_depth:  5
+############################################################################################# s_depth:  1
+############################################################################################# s_depth:  2
+############################################################################################# s_depth:  2
+############################################################################################# s_depth:  1
+############################################################################################# s_depth:  3
+############################################################################################# s_depth:  5
+############################################################################################# s_depth:  5
+############################################################################################# s_depth:  5
+############################################################################################# s_depth:  1
+############################################################################################# s_depth:  3
+############################################################################################# s_depth:  3
+############################################################################################# s_depth:  4
+##################################################### named parameters
+test:   0% 0/9 [00:00<?, ?it/s]test:  11% 1/9 [00:08<01:07,  8.47s/it]test:  22% 2/9 [00:09<00:27,  3.98s/it]test:  33% 3/9 [00:09<00:13,  2.21s/it]test:  44% 4/9 [00:11<00:10,  2.18s/it]test:  56% 5/9 [00:12<00:07,  1.80s/it]test:  67% 6/9 [00:13<00:04,  1.57s/it]test:  78% 7/9 [00:14<00:02,  1.37s/it]test:  89% 8/9 [00:14<00:00,  1.00it/s]test: 100% 9/9 [00:15<00:00,  1.11it/s]test: 100% 9/9 [00:15<00:00,  1.75s/it]
+############################################################################################# s_depth:  4
+############################################################################################# s_depth:  4
+############################################################################################# s_depth:  2
+############################################################################################# s_depth:  5
+############################################################################################# s_depth:  5
+############################################################################################# s_depth:  3
+############################################################################################# s_depth:  3
+############################################################################################# s_depth:  1
+############################################################################################# s_depth:  3
+[acc/iou_test] = 0.222677
+[acc/iou_test_best] = 0.222677
+[save_path] = runs/shapenet.pvcnn.c1
+
+==> training epoch 1/200
+train:   0% 0/21 [00:00<?, ?it/s]train:   5% 1/21 [00:11<03:48, 11.41s/it]train:  10% 2/21 [00:13<01:50,  5.84s/it]train:  14% 3/21 [00:17<01:28,  4.93s/it]train:  19% 4/21 [00:24<01:41,  5.98s/it]train:  24% 5/21 [00:25<01:08,  4.25s/it]train:  29% 6/21 [00:27<00:51,  3.44s/it]train:  33% 7/21 [00:32<00:51,  3.68s/it]train:  38% 8/21 [00:36<00:50,  3.92s/it]train:  43% 9/21 [00:40<00:49,  4.11s/it]train:  48% 10/21 [00:47<00:53,  4.88s/it]train:  52% 11/21 [00:48<00:36,  3.62s/it]train:  57% 12/21 [00:49<00:24,  2.75s/it]train:  62% 13/21 [00:51<00:20,  2.62s/it]train:  67% 14/21 [00:55<00:22,  3.15s/it]train:  71% 15/21 [00:59<00:19,  3.23s/it]train:  71% 15/21 [01:01<00:24,  4.10s/it]
+############################################################################################# s_depth:  1
+############################################################################################# s_depth:  3
+############################################################################################# s_depth:  4
+############################################################################################# s_depth:  3
+############################################################################################# s_depth:  4
+############################################################################################# s_depth:  1
+############################################################################################# s_depth:  4
+############################################################################################# s_depth:  5
+############################################################################################# s_depth:  3
+############################################################################################# s_depth:  5
+############################################################################################# s_depth:  2
+############################################################################################# s_depth:  1
+############################################################################################# s_depth:  3
+############################################################################################# s_depth:  3
+############################################################################################# s_depth:  3
+############################################################################################# s_depth:  4
+Traceback (most recent call last):
+  File "train.py", line 285, in <module>
+    main()
+  File "train.py", line 247, in main
+    current_step=current_step, writer=writer)
+  File "train.py", line 116, in train
+    outputs = model(inputs)
+  File "/apps/eb/PyTorch/1.6.0-fosscuda-2019b-Python-3.7.4/lib/python3.7/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/apps/eb/PyTorch/1.6.0-fosscuda-2019b-Python-3.7.4/lib/python3.7/site-packages/torch/nn/parallel/data_parallel.py", line 153, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/apps/eb/PyTorch/1.6.0-fosscuda-2019b-Python-3.7.4/lib/python3.7/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/scratch/fs47816/workdir/sample_scripts/pvcnn_n/pvcnn/models/shapenet/pvcnn.py", line 144, in forward
+    features,_ = s_layers[i]((features, coords))
+  File "/apps/eb/PyTorch/1.6.0-fosscuda-2019b-Python-3.7.4/lib/python3.7/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/scratch/fs47816/workdir/sample_scripts/pvcnn_n/pvcnn/modules/pvconv.py", line 36, in forward
+    voxel_features = self.voxel_layers(voxel_features)
+  File "/apps/eb/PyTorch/1.6.0-fosscuda-2019b-Python-3.7.4/lib/python3.7/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/apps/eb/PyTorch/1.6.0-fosscuda-2019b-Python-3.7.4/lib/python3.7/site-packages/torch/nn/modules/container.py", line 117, in forward
+    input = module(input)
+  File "/apps/eb/PyTorch/1.6.0-fosscuda-2019b-Python-3.7.4/lib/python3.7/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/scratch/fs47816/workdir/sample_scripts/pvcnn_n/pvcnn/modules/se.py", line 17, in forward
+    return inputs * self.fc(inputs.mean(-1).mean(-1).mean(-1)).view(inputs.shape[0], inputs.shape[1], 1, 1, 1)
+RuntimeError: CUDA out of memory. Tried to allocate 512.00 MiB (GPU 0; 15.78 GiB total capacity; 12.27 GiB already allocated; 291.50 MiB free; 14.28 GiB reserved in total by PyTorch)

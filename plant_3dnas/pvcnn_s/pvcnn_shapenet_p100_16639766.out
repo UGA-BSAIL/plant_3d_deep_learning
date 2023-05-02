@@ -1,0 +1,82 @@
+==> loading configs from ['configs/shapenet/pvcnn/c1.py']
+/apps/eb/Python/3.8.6-GCCcore-10.2.0/lib/python3.8/site-packages/setuptools/distutils_patch.py:25: UserWarning: Distutils was imported before Setuptools. This usage is discouraged and may exhibit undesirable behaviors or errors. Please use Setuptools' objects directly or at least import Setuptools first.
+  warnings.warn(
+/apps/eb/PyTorch/1.10.0-fosscuda-2020b-Python-3.8.6/lib/python3.8/site-packages/torch/utils/cpp_extension.py:295: UserWarning: 
+
+                               !! WARNING !!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Your compiler (c++) is not compatible with the compiler Pytorch was
+built with for this platform, which is g++ on linux. Please
+use g++ to to compile your extension. Alternatively, you may
+compile PyTorch from source using c++, and then you can also use
+c++ to compile your extension.
+
+See https://github.com/pytorch/pytorch/blob/master/CONTRIBUTING.md for help
+with compiling PyTorch from source.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+                              !! WARNING !!
+
+  warnings.warn(WRONG_COMPILER_WARNING.format(
+[seed] = 1588147245
+[deterministic] = False
+[data]
+  [num_workers] = 1
+  [num_classes] = 3
+  [num_shapes] = 1
+[dataset]
+  [func] = <class 'datasets.shapenet.ShapeNet'>
+  [root] = /scratch/fs47816/point_cloud_data/shapenetcore_partanno_segmentation_benchmark_v0_normal
+  [with_normal] = False
+  [with_one_hot_shape_id] = True
+  [normalize] = True
+  [jitter] = False
+  [num_points] = 100000
+  [split] = test
+[evaluate]
+  [fn] = <function evaluate at 0x2ade02951e50>
+  [num_votes] = 1
+  [dataset]
+    [split] = test
+  [best_checkpoint_path] = runs/shapenet.pvcnn.c1/best.pth.tar
+  [predictions_path] = runs/shapenet.pvcnn.c1/best.predictions
+  [stats_path] = runs/shapenet.pvcnn.c1/best.eval.npy
+[train]
+  [num_epochs] = 200
+  [batch_size] = 1
+  [meters]
+    [acc/iou_{}]
+      [func] = <class 'meters.shapenet.MeterShapeNet'>
+      [num_classes] = 3
+  [metric] = acc/iou_test
+  [criterion]
+    [func] = <class 'torch.nn.modules.loss.CrossEntropyLoss'>
+  [optimizer]
+    [func] = <class 'torch.optim.adam.Adam'>
+    [lr] = 0.001
+  [scheduler]
+    [func] = <class 'torch.optim.lr_scheduler.CosineAnnealingLR'>
+    [T_max] = 200
+  [save_path] = runs/shapenet.pvcnn.c1
+[model]
+  [func] = <class 'models.shapenet.pvcnn.PVCNN'>
+  [num_classes] = 3
+  [num_shapes] = 1
+  [extra_feature_channels] = 0
+[device] = cuda
+[device_ids] = [0]
+
+==> loading dataset "[func] = <class 'datasets.shapenet.ShapeNet'>
+[root] = /scratch/fs47816/point_cloud_data/shapenetcore_partanno_segmentation_benchmark_v0_normal
+[with_normal] = False
+[with_one_hot_shape_id] = True
+[normalize] = True
+[jitter] = False
+[num_points] = 100000
+[split] = test"
+
+==> creating model "[func] = <class 'models.shapenet.pvcnn.PVCNN'>
+[num_classes] = 3
+[num_shapes] = 1
+[extra_feature_channels] = 0"

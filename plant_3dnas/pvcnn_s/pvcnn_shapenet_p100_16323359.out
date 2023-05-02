@@ -1,0 +1,140 @@
+==> loading configs from ['configs/shapenet/pvcnn/c1.py']
+/apps/eb/Python/3.8.6-GCCcore-10.2.0/lib/python3.8/site-packages/setuptools/distutils_patch.py:25: UserWarning: Distutils was imported before Setuptools. This usage is discouraged and may exhibit undesirable behaviors or errors. Please use Setuptools' objects directly or at least import Setuptools first.
+  warnings.warn(
+/apps/eb/PyTorch/1.10.0-fosscuda-2020b-Python-3.8.6/lib/python3.8/site-packages/torch/utils/cpp_extension.py:295: UserWarning: 
+
+                               !! WARNING !!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Your compiler (c++) is not compatible with the compiler Pytorch was
+built with for this platform, which is g++ on linux. Please
+use g++ to to compile your extension. Alternatively, you may
+compile PyTorch from source using c++, and then you can also use
+c++ to compile your extension.
+
+See https://github.com/pytorch/pytorch/blob/master/CONTRIBUTING.md for help
+with compiling PyTorch from source.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+                              !! WARNING !!
+
+  warnings.warn(WRONG_COMPILER_WARNING.format(
+[seed] = 1588147245
+[deterministic] = False
+[data]
+  [num_workers] = 1
+  [num_classes] = 3
+  [num_shapes] = 1
+[dataset]
+  [func] = <class 'datasets.shapenet.ShapeNet'>
+  [root] = /scratch/fs47816/point_cloud_data/shapenetcore_partanno_segmentation_benchmark_v0_normal
+  [with_normal] = False
+  [with_one_hot_shape_id] = True
+  [normalize] = True
+  [jitter] = False
+  [num_points] = 100000
+  [split] = test
+[evaluate]
+  [fn] = <function evaluate at 0x2af4d51bce50>
+  [num_votes] = 1
+  [dataset]
+    [split] = test
+  [best_checkpoint_path] = runs/shapenet.pvcnn.c1/best.pth.tar
+  [predictions_path] = runs/shapenet.pvcnn.c1/best.predictions
+  [stats_path] = runs/shapenet.pvcnn.c1/best.eval.npy
+[train]
+  [num_epochs] = 200
+  [batch_size] = 1
+  [meters]
+    [acc/iou_{}]
+      [func] = <class 'meters.shapenet.MeterShapeNet'>
+      [num_classes] = 3
+  [metric] = acc/iou_test
+  [criterion]
+    [func] = <class 'torch.nn.modules.loss.CrossEntropyLoss'>
+  [optimizer]
+    [func] = <class 'torch.optim.adam.Adam'>
+    [lr] = 0.001
+  [scheduler]
+    [func] = <class 'torch.optim.lr_scheduler.CosineAnnealingLR'>
+    [T_max] = 200
+  [save_path] = runs/shapenet.pvcnn.c1
+[model]
+  [func] = <class 'models.shapenet.pvcnn.PVCNN'>
+  [num_classes] = 3
+  [num_shapes] = 1
+  [extra_feature_channels] = 0
+[device] = cuda
+[device_ids] = [0]
+
+==> loading dataset "[func] = <class 'datasets.shapenet.ShapeNet'>
+[root] = /scratch/fs47816/point_cloud_data/shapenetcore_partanno_segmentation_benchmark_v0_normal
+[with_normal] = False
+[with_one_hot_shape_id] = True
+[normalize] = True
+[jitter] = False
+[num_points] = 100000
+[split] = test"
+
+==> creating model "[func] = <class 'models.shapenet.pvcnn.PVCNN'>
+[num_classes] = 3
+[num_shapes] = 1
+[extra_feature_channels] = 0"
+==> loading checkpoint "runs/shapenet.pvcnn.c1/best.pth.tar"
+Mem of model in bytes:  9970028
+eval:   0% 0/9 [00:00<?, ?it/s]eval:  11% 1/9 [00:09<01:16,  9.50s/it]eval:  22% 2/9 [00:13<00:44,  6.41s/it]eval:  33% 3/9 [00:17<00:31,  5.32s/it]eval:  44% 4/9 [00:23<00:27,  5.53s/it]eval:  56% 5/9 [00:28<00:20,  5.18s/it]eval:  67% 6/9 [00:32<00:14,  4.84s/it]eval:  78% 7/9 [00:38<00:10,  5.18s/it]eval:  89% 8/9 [00:43<00:05,  5.09s/it]eval: 100% 9/9 [00:47<00:00,  4.91s/it]eval: 100% 9/9 [00:47<00:00,  5.29s/it]
+--- 5.748968601226807 seconds ---
+************************************************************************************ output_plant/0_gt.txt
+************************************************************************************ output_plant/0_pred.txt
+************************************************************************************ output_plant/0_diff.txt
+torch.cuda.max_memory_allocated() 7023784960
+--- 0.9037842750549316 seconds ---
+************************************************************************************ output_plant/2_gt.txt
+************************************************************************************ output_plant/2_pred.txt
+************************************************************************************ output_plant/2_diff.txt
+torch.cuda.max_memory_allocated() 4589392384
+--- 0.9045872688293457 seconds ---
+************************************************************************************ output_plant/4_gt.txt
+************************************************************************************ output_plant/4_pred.txt
+************************************************************************************ output_plant/4_diff.txt
+torch.cuda.max_memory_allocated() 4588992512
+--- 0.8704631328582764 seconds ---
+************************************************************************************ output_plant/6_gt.txt
+************************************************************************************ output_plant/6_pred.txt
+************************************************************************************ output_plant/6_diff.txt
+torch.cuda.max_memory_allocated() 4589392384
+--- 0.878044605255127 seconds ---
+************************************************************************************ output_plant/8_gt.txt
+************************************************************************************ output_plant/8_pred.txt
+************************************************************************************ output_plant/8_diff.txt
+torch.cuda.max_memory_allocated() 4588992512
+--- 0.8871805667877197 seconds ---
+************************************************************************************ output_plant/10_gt.txt
+************************************************************************************ output_plant/10_pred.txt
+************************************************************************************ output_plant/10_diff.txt
+torch.cuda.max_memory_allocated() 4589392384
+--- 0.8976340293884277 seconds ---
+************************************************************************************ output_plant/12_gt.txt
+************************************************************************************ output_plant/12_pred.txt
+************************************************************************************ output_plant/12_diff.txt
+torch.cuda.max_memory_allocated() 4588992512
+--- 0.8699395656585693 seconds ---
+************************************************************************************ output_plant/14_gt.txt
+************************************************************************************ output_plant/14_pred.txt
+************************************************************************************ output_plant/14_diff.txt
+torch.cuda.max_memory_allocated() 4589392384
+--- 0.880265474319458 seconds ---
+************************************************************************************ output_plant/16_gt.txt
+************************************************************************************ output_plant/16_pred.txt
+************************************************************************************ output_plant/16_diff.txt
+torch.cuda.max_memory_allocated() 4588992512
+clssIoU:    87.32
+meanIoU: 87.32
+shapeIoU:    87.32
+clssPrec:    87.18     94.14     98.07
+clssRecall:    98.28     84.78     97.70
+clssIoU:    86.00     80.08     95.87
+Accuracy: 95.66
+meanIoU: 87.32
+time_consumption:  [5.748968601226807, 0.9037842750549316, 0.9045872688293457, 0.8704631328582764, 0.878044605255127, 0.8871805667877197, 0.8976340293884277, 0.8699395656585693, 0.880265474319458]
+memory_consumption:  [7023784960, 4589392384, 4588992512, 4589392384, 4588992512, 4589392384, 4588992512, 4589392384, 4588992512]

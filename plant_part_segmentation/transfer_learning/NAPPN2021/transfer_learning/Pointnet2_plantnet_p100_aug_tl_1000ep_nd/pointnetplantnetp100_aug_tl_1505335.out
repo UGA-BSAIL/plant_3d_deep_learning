@@ -1,0 +1,25 @@
+PARAMETER ...
+Namespace(batch_size=1, gpu='0', log_dir='pointnet2_part_seg_msg', normal=False, num_point=100000, num_votes=3)
+['SPL_0509.txt', 'SPL_0603.txt', 'SPL_0401.txt', 'DES56 - Cloud.txt', 'MDN0101 - Cloud.txt', 'ST5020 - Cloud.txt']
+The number of test data is: 6
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [01:45<08:47, 105.46s/it] 33%|███▎      | 2/6 [03:01<05:15, 78.81s/it]  50%|█████     | 3/6 [04:16<03:46, 75.40s/it] 67%|██████▋   | 4/6 [05:31<02:30, 75.28s/it] 83%|████████▎ | 5/6 [06:45<01:14, 74.17s/it]100%|██████████| 6/6 [08:00<00:00, 75.15s/it]100%|██████████| 6/6 [08:00<00:00, 80.16s/it]
+eval mIoU of Airplane       0.895238
+eval mIoU of Bag            nan
+eval mIoU of Cap            nan
+eval mIoU of Car            nan
+eval mIoU of Chair          nan
+eval mIoU of Earphone       nan
+eval mIoU of Guitar         nan
+eval mIoU of Knife          nan
+eval mIoU of Lamp           nan
+eval mIoU of Laptop         nan
+eval mIoU of Motorbike      nan
+eval mIoU of Mug            nan
+eval mIoU of Pistol         nan
+eval mIoU of Rocket         nan
+eval mIoU of Skateboard     nan
+eval mIoU of Table          nan
+Accuracy is: 0.93958
+Class avg accuracy is: nan
+Class avg mIOU is: nan
+Inctance avg mIOU is: 0.89524

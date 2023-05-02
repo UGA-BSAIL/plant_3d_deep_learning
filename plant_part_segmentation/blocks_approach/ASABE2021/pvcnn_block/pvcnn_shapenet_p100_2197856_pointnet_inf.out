@@ -1,0 +1,207 @@
+--------------------------------------------------------------------------
+A process has executed an operation involving a call to the
+"fork()" system call to create a child process.  Open MPI is currently
+operating in a condition that could result in memory corruption or
+other system errors; your job may hang, crash, or produce silent
+data corruption.  The use of fork() (or system() or other calls that
+create child processes) is strongly discouraged.
+
+The process that invoked fork was:
+
+  Local host:          [[47432,1],0] (PID 94650)
+
+If you are *absolutely sure* that your application will successfully
+and correctly survive a call to fork(), you may disable this warning
+by setting the mpi_warn_on_fork MCA parameter to 0.
+--------------------------------------------------------------------------
+==> loading configs from ['configs/shapenet/pointnet.py']
+/apps/eb/PyTorch/1.6.0-fosscuda-2019b-Python-3.7.4/lib/python3.7/site-packages/torch/utils/cpp_extension.py:252: UserWarning: 
+
+                               !! WARNING !!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Your compiler (c++) is not compatible with the compiler Pytorch was
+built with for this platform, which is g++ on linux. Please
+use g++ to to compile your extension. Alternatively, you may
+compile PyTorch from source using c++, and then you can also use
+c++ to compile your extension.
+
+See https://github.com/pytorch/pytorch/blob/master/CONTRIBUTING.md for help
+with compiling PyTorch from source.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+                              !! WARNING !!
+
+  platform=sys.platform))
+eval:   0% 0/9 [00:00<?, ?it/s]
+eval:   0% 0/70 [00:00<?, ?it/s][A
+eval:   1% 1/70 [00:02<02:21,  2.06s/it][A
+eval:   4% 3/70 [00:02<01:38,  1.47s/it][A
+eval:   6% 4/70 [00:02<01:10,  1.07s/it][A
+eval:   7% 5/70 [00:02<00:51,  1.26it/s][A
+eval:  11% 8/70 [00:02<00:35,  1.76it/s][A
+eval:  16% 11/70 [00:02<00:24,  2.42it/s][A
+eval:  19% 13/70 [00:03<00:18,  3.17it/s][A
+eval:  21% 15/70 [00:03<00:13,  4.20it/s][A
+eval:  27% 19/70 [00:03<00:09,  5.59it/s][A
+eval:  37% 26/70 [00:03<00:05,  7.71it/s][A
+eval:  44% 31/70 [00:03<00:04,  9.67it/s][A
+eval:  51% 36/70 [00:03<00:02, 12.70it/s][A
+eval:  61% 43/70 [00:03<00:01, 14.89it/s][A
+eval:  67% 47/70 [00:04<00:01, 14.77it/s][A
+eval:  79% 55/70 [00:04<00:00, 19.48it/s][A
+eval:  90% 63/70 [00:04<00:00, 24.80it/s][Aeval: 100% 70/70 [00:04<00:00, 15.39it/s]
+eval:  11% 1/9 [00:13<01:44, 13.02s/it]
+eval:   0% 0/108 [00:00<?, ?it/s][A
+eval:  14% 15/108 [00:00<00:00, 131.68it/s][A
+eval:  25% 27/108 [00:00<00:00, 125.24it/s][A
+eval:  34% 37/108 [00:00<00:00, 115.85it/s][A
+eval:  42% 45/108 [00:00<00:00, 98.48it/s] [A
+eval:  49% 53/108 [00:00<00:00, 77.65it/s][A
+eval:  56% 60/108 [00:00<00:00, 67.56it/s][A
+eval:  66% 71/108 [00:00<00:00, 75.42it/s][A
+eval:  75% 81/108 [00:00<00:00, 78.72it/s][A
+eval:  82% 89/108 [00:01<00:00, 78.83it/s][A
+eval:  92% 99/108 [00:01<00:00, 82.12it/s][A
+eval: 100% 108/108 [00:01<00:00, 80.43it/s][Aeval: 100% 108/108 [00:01<00:00, 85.07it/s]
+eval:  22% 2/9 [00:23<01:25, 12.19s/it]
+eval:   0% 0/104 [00:00<?, ?it/s][A
+eval:   9% 9/104 [00:00<00:01, 81.39it/s][A
+eval:  19% 20/104 [00:00<00:00, 88.27it/s][A
+eval:  25% 26/104 [00:00<00:01, 76.78it/s][A
+eval:  33% 34/104 [00:00<00:00, 77.47it/s][A
+eval:  40% 42/104 [00:00<00:00, 77.87it/s][A
+eval:  47% 49/104 [00:00<00:01, 47.62it/s][A
+eval:  56% 58/104 [00:00<00:00, 54.16it/s][A
+eval:  62% 65/104 [00:01<00:00, 56.75it/s][A
+eval:  70% 73/104 [00:01<00:00, 61.91it/s][A
+eval:  81% 84/104 [00:01<00:00, 69.51it/s][A
+eval:  92% 96/104 [00:01<00:00, 76.64it/s][Aeval: 100% 104/104 [00:01<00:00, 72.46it/s]
+eval:  33% 3/9 [00:33<01:09, 11.61s/it]
+eval:   0% 0/59 [00:00<?, ?it/s][A
+eval:  19% 11/59 [00:00<00:00, 89.99it/s][A
+eval:  25% 15/59 [00:00<00:00, 45.15it/s][A
+eval:  44% 26/59 [00:00<00:00, 50.43it/s][A
+eval:  53% 31/59 [00:00<00:00, 32.65it/s][A
+eval:  59% 35/59 [00:01<00:01, 20.72it/s][A
+eval:  69% 41/59 [00:01<00:00, 25.76it/s][A
+eval:  80% 47/59 [00:01<00:00, 24.19it/s][A
+eval:  86% 51/59 [00:01<00:00, 25.94it/s][Aeval: 100% 59/59 [00:01<00:00, 34.81it/s]
+eval:  44% 4/9 [00:45<00:59, 11.85s/it]
+eval:   0% 0/68 [00:00<?, ?it/s][A
+eval:  12% 8/68 [00:00<00:00, 79.73it/s][A
+eval:  25% 17/68 [00:00<00:00, 74.95it/s][A
+eval:  31% 21/68 [00:00<00:00, 56.83it/s][A
+eval:  43% 29/68 [00:00<00:00, 59.89it/s][A
+eval:  51% 35/68 [00:00<00:00, 58.64it/s][A
+eval:  60% 41/68 [00:00<00:00, 57.25it/s][A
+eval:  72% 49/68 [00:00<00:00, 61.19it/s][A
+eval:  81% 55/68 [00:00<00:00, 57.37it/s][A
+eval:  91% 62/68 [00:01<00:00, 60.29it/s][Aeval: 100% 68/68 [00:01<00:00, 62.34it/s]
+eval:  56% 5/9 [00:56<00:45, 11.33s/it]
+eval:   0% 0/43 [00:00<?, ?it/s][A
+eval:  19% 8/43 [00:00<00:00, 69.26it/s][A
+eval:  28% 12/43 [00:00<00:00, 55.10it/s][A
+eval:  42% 18/43 [00:00<00:00, 53.35it/s][A
+eval:  51% 22/43 [00:00<00:00, 27.97it/s][A
+eval:  58% 25/43 [00:01<00:01, 16.04it/s][A
+eval:  72% 31/43 [00:01<00:00, 20.43it/s][A
+eval:  81% 35/43 [00:01<00:00, 17.58it/s][A
+eval:  93% 40/43 [00:01<00:00, 21.44it/s][Aeval: 100% 43/43 [00:01<00:00, 27.54it/s]
+eval:  67% 6/9 [01:06<00:33, 11.01s/it]
+eval:   0% 0/32 [00:00<?, ?it/s][A
+eval:  19% 6/32 [00:00<00:00, 57.39it/s][A
+eval:  31% 10/32 [00:00<00:00, 43.80it/s][A
+eval:  41% 13/32 [00:00<00:00, 21.28it/s][A
+eval:  56% 18/32 [00:00<00:00, 23.84it/s][A
+eval:  72% 23/32 [00:01<00:00, 18.81it/s][A
+eval:  81% 26/32 [00:01<00:00, 20.66it/s][A
+eval:  97% 31/32 [00:01<00:00, 24.34it/s][Aeval: 100% 32/32 [00:01<00:00, 23.79it/s]
+eval:  78% 7/9 [01:18<00:22, 11.38s/it]
+eval:   0% 0/26 [00:00<?, ?it/s][A
+eval:  15% 4/26 [00:00<00:00, 27.58it/s][A
+eval:  35% 9/26 [00:00<00:00, 31.85it/s][A
+eval:  46% 12/26 [00:00<00:00, 26.65it/s][A
+eval:  58% 15/26 [00:00<00:00, 15.36it/s][A
+eval:  69% 18/26 [00:00<00:00, 17.35it/s][A
+eval:  77% 20/26 [00:01<00:00, 11.68it/s][A
+eval:  88% 23/26 [00:01<00:00, 12.38it/s][Aeval: 100% 26/26 [00:01<00:00, 17.91it/s]
+eval:  89% 8/9 [01:29<00:11, 11.33s/it]
+eval:   0% 0/33 [00:00<?, ?it/s][A
+eval:  21% 7/33 [00:00<00:00, 60.37it/s][A
+eval:  30% 10/33 [00:00<00:01, 17.97it/s][A
+eval:  45% 15/33 [00:00<00:00, 21.36it/s][A
+eval:  58% 19/33 [00:01<00:00, 17.62it/s][A
+eval:  70% 23/33 [00:01<00:00, 19.45it/s][A
+eval:  79% 26/33 [00:01<00:00, 20.21it/s][A
+eval: 100% 33/33 [00:01<00:00, 25.33it/s][Aeval: 100% 33/33 [00:01<00:00, 23.38it/s]
+eval: 100% 9/9 [01:40<00:00, 11.09s/it]eval: 100% 9/9 [01:40<00:00, 11.15s/it]
+[seed] = 1588147245
+[deterministic] = False
+[data]
+  [num_workers] = 16
+  [num_classes] = 3
+  [num_shapes] = 1
+[dataset]
+  [func] = <class 'datasets.shapenet.ShapeNet'>
+  [root] = /scratch/fs47816/point_cloud_data/plant_data
+  [with_normal] = False
+  [with_one_hot_shape_id] = True
+  [normalize] = True
+  [jitter] = True
+  [num_points] = 2048
+  [split] = test
+[evaluate]
+  [fn] = <function evaluate at 0x2ba38dcb37a0>
+  [num_votes] = 1
+  [dataset]
+    [split] = test
+  [best_checkpoint_path] = runs/shapenet.pointnet/best.pth.tar
+  [predictions_path] = runs/shapenet.pointnet/best.predictions
+  [stats_path] = runs/shapenet.pointnet/best.eval.npy
+[train]
+  [num_epochs] = 500
+  [batch_size] = 32
+  [meters]
+    [acc/iou_{}]
+      [func] = <class 'meters.shapenet.MeterShapeNet'>
+      [num_classes] = 3
+  [metric] = acc/iou_test
+  [criterion]
+    [func] = <class 'torch.nn.modules.loss.CrossEntropyLoss'>
+  [optimizer]
+    [func] = <class 'torch.optim.adam.Adam'>
+    [lr] = 0.001
+  [scheduler]
+    [func] = <class 'torch.optim.lr_scheduler.StepLR'>
+    [step_size] = 20
+    [gamma] = 0.5
+  [save_path] = runs/shapenet.pointnet
+[model]
+  [func] = <class 'models.shapenet.pointnet.PointNet'>
+  [num_classes] = 3
+  [num_shapes] = 1
+  [extra_feature_channels] = 0
+[device] = cuda
+[device_ids] = [0]
+
+==> loading dataset "[func] = <class 'datasets.shapenet.ShapeNet'>
+[root] = /scratch/fs47816/point_cloud_data/plant_data
+[with_normal] = False
+[with_one_hot_shape_id] = True
+[normalize] = True
+[jitter] = True
+[num_points] = 2048
+[split] = test"
+
+==> creating model "[func] = <class 'models.shapenet.pointnet.PointNet'>
+[num_classes] = 3
+[num_shapes] = 1
+[extra_feature_channels] = 0"
+==> loading checkpoint "runs/shapenet.pointnet/best.pth.tar"
+shapeIoU:    61.62
+clssPrec:    90.80     63.52     74.12
+clssRecall:    89.88     67.95     81.52
+clssIoU:    81.97     42.91     59.98
+Accuracy: 73.14
+meanIoU: 61.62

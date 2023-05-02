@@ -1,0 +1,235 @@
+--------------------------------------------------------------------------
+A process has executed an operation involving a call to the
+"fork()" system call to create a child process.  Open MPI is currently
+operating in a condition that could result in memory corruption or
+other system errors; your job may hang, crash, or produce silent
+data corruption.  The use of fork() (or system() or other calls that
+create child processes) is strongly discouraged.
+
+The process that invoked fork was:
+
+  Local host:          [[31516,1],0] (PID 111502)
+
+If you are *absolutely sure* that your application will successfully
+and correctly survive a call to fork(), you may disable this warning
+by setting the mpi_warn_on_fork MCA parameter to 0.
+--------------------------------------------------------------------------
+==> loading configs from ['configs/shapenet/pvcnn/c1.py']
+/apps/eb/PyTorch/1.6.0-fosscuda-2019b-Python-3.7.4/lib/python3.7/site-packages/torch/utils/cpp_extension.py:252: UserWarning: 
+
+                               !! WARNING !!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Your compiler (c++) is not compatible with the compiler Pytorch was
+built with for this platform, which is g++ on linux. Please
+use g++ to to compile your extension. Alternatively, you may
+compile PyTorch from source using c++, and then you can also use
+c++ to compile your extension.
+
+See https://github.com/pytorch/pytorch/blob/master/CONTRIBUTING.md for help
+with compiling PyTorch from source.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+                              !! WARNING !!
+
+  platform=sys.platform))
+eval:   0% 0/9 [00:00<?, ?it/s]
+eval:   0% 0/70 [00:00<?, ?it/s][A
+eval:   1% 1/70 [00:02<02:33,  2.22s/it][A
+eval:   3% 2/70 [00:02<01:47,  1.58s/it][A
+eval:   4% 3/70 [00:02<01:18,  1.18s/it][A
+eval:   6% 4/70 [00:02<00:58,  1.13it/s][A
+eval:   7% 5/70 [00:03<00:45,  1.43it/s][A
+eval:  11% 8/70 [00:03<00:31,  1.96it/s][A
+eval:  16% 11/70 [00:03<00:22,  2.61it/s][A
+eval:  17% 12/70 [00:03<00:19,  2.91it/s][A
+eval:  20% 14/70 [00:03<00:14,  3.74it/s][A
+eval:  27% 19/70 [00:04<00:10,  4.88it/s][A
+eval:  33% 23/70 [00:04<00:07,  6.55it/s][A
+eval:  44% 31/70 [00:04<00:04,  8.23it/s][A
+eval:  50% 35/70 [00:04<00:03, 10.61it/s][A
+eval:  59% 41/70 [00:04<00:02, 14.03it/s][A
+eval:  64% 45/70 [00:05<00:02,  9.45it/s][A
+eval:  70% 49/70 [00:05<00:01, 12.16it/s][A
+eval:  77% 54/70 [00:05<00:01, 15.39it/s][A
+eval:  87% 61/70 [00:06<00:00, 19.59it/s][A
+eval:  94% 66/70 [00:06<00:00, 23.73it/s][Aeval: 100% 70/70 [00:06<00:00, 11.26it/s]
+eval:  11% 1/9 [00:14<01:55, 14.45s/it]
+eval:   0% 0/108 [00:00<?, ?it/s][A
+eval:   7% 8/108 [00:00<00:01, 78.38it/s][A
+eval:  14% 15/108 [00:00<00:01, 74.73it/s][A
+eval:  21% 23/108 [00:00<00:01, 75.40it/s][A
+eval:  27% 29/108 [00:00<00:01, 67.02it/s][A
+eval:  32% 35/108 [00:00<00:01, 63.20it/s][A
+eval:  39% 42/108 [00:00<00:01, 64.41it/s][A
+eval:  44% 48/108 [00:00<00:01, 57.09it/s][A
+eval:  50% 54/108 [00:00<00:01, 43.98it/s][A
+eval:  55% 59/108 [00:01<00:01, 42.69it/s][A
+eval:  59% 64/108 [00:01<00:01, 42.87it/s][A
+eval:  67% 72/108 [00:01<00:00, 48.32it/s][A
+eval:  74% 80/108 [00:01<00:00, 53.84it/s][A
+eval:  80% 86/108 [00:01<00:00, 49.94it/s][A
+eval:  85% 92/108 [00:01<00:00, 52.49it/s][A
+eval:  92% 99/108 [00:01<00:00, 54.35it/s][A
+eval:  97% 105/108 [00:01<00:00, 52.31it/s][Aeval: 100% 108/108 [00:01<00:00, 54.70it/s]
+eval:  22% 2/9 [00:24<01:32, 13.24s/it]
+eval:   0% 0/104 [00:00<?, ?it/s][A
+eval:   6% 6/104 [00:00<00:01, 53.78it/s][A
+eval:  12% 12/104 [00:00<00:01, 52.68it/s][A
+eval:  19% 20/104 [00:00<00:01, 58.02it/s][A
+eval:  24% 25/104 [00:00<00:01, 48.90it/s][A
+eval:  30% 31/104 [00:00<00:01, 50.25it/s][A
+eval:  36% 37/104 [00:00<00:01, 51.99it/s][A
+eval:  40% 42/104 [00:00<00:01, 50.40it/s][A
+eval:  45% 47/104 [00:01<00:02, 25.87it/s][A
+eval:  51% 53/104 [00:01<00:01, 31.10it/s][A
+eval:  57% 59/104 [00:01<00:01, 34.82it/s][A
+eval:  62% 64/104 [00:01<00:01, 36.11it/s][A
+eval:  67% 70/104 [00:01<00:00, 39.12it/s][A
+eval:  75% 78/104 [00:01<00:00, 45.45it/s][A
+eval:  81% 84/104 [00:01<00:00, 47.99it/s][A
+eval:  88% 92/104 [00:02<00:00, 54.45it/s][A
+eval:  95% 99/104 [00:02<00:00, 55.87it/s][Aeval: 100% 104/104 [00:02<00:00, 46.99it/s]
+eval:  33% 3/9 [00:35<01:14, 12.46s/it]
+eval:   0% 0/59 [00:00<?, ?it/s][A
+eval:  12% 7/59 [00:00<00:00, 61.76it/s][A
+eval:  22% 13/59 [00:00<00:00, 59.91it/s][A
+eval:  27% 16/59 [00:00<00:01, 22.29it/s][A
+eval:  37% 22/59 [00:00<00:01, 27.29it/s][A
+eval:  44% 26/59 [00:00<00:01, 28.60it/s][A
+eval:  53% 31/59 [00:01<00:01, 19.27it/s][A
+eval:  58% 34/59 [00:01<00:02, 11.38it/s][A
+eval:  63% 37/59 [00:01<00:01, 13.67it/s][A
+eval:  71% 42/59 [00:01<00:00, 17.28it/s][A
+eval:  80% 47/59 [00:02<00:00, 14.93it/s][A
+eval:  85% 50/59 [00:02<00:00, 16.51it/s][A
+eval:  92% 54/59 [00:02<00:00, 19.98it/s][Aeval: 100% 59/59 [00:02<00:00, 21.70it/s]
+eval:  44% 4/9 [00:48<01:03, 12.62s/it]
+eval:   0% 0/68 [00:00<?, ?it/s][A
+eval:   6% 4/68 [00:00<00:01, 37.84it/s][A
+eval:  18% 12/68 [00:00<00:01, 42.17it/s][A
+eval:  25% 17/68 [00:00<00:01, 39.90it/s][A
+eval:  29% 20/68 [00:00<00:01, 33.53it/s][A
+eval:  37% 25/68 [00:00<00:01, 34.01it/s][A
+eval:  46% 31/68 [00:00<00:00, 38.67it/s][A
+eval:  51% 35/68 [00:00<00:00, 34.49it/s][A
+eval:  57% 39/68 [00:01<00:00, 33.77it/s][A
+eval:  68% 46/68 [00:01<00:00, 39.36it/s][A
+eval:  75% 51/68 [00:01<00:00, 33.45it/s][A
+eval:  82% 56/68 [00:01<00:00, 37.11it/s][A
+eval:  90% 61/68 [00:01<00:00, 37.97it/s][A
+eval:  97% 66/68 [00:01<00:00, 40.67it/s][Aeval: 100% 68/68 [00:01<00:00, 40.12it/s]
+eval:  56% 5/9 [00:58<00:47, 11.97s/it]
+eval:   0% 0/43 [00:00<?, ?it/s][A
+eval:  14% 6/43 [00:00<00:00, 40.37it/s][A
+eval:  26% 11/43 [00:00<00:00, 36.91it/s][A
+eval:  37% 16/43 [00:00<00:00, 34.36it/s][A
+eval:  49% 21/43 [00:00<00:00, 34.84it/s][A
+eval:  56% 24/43 [00:01<00:01, 14.06it/s][A
+eval:  60% 26/43 [00:01<00:02,  7.73it/s][A
+eval:  72% 31/43 [00:01<00:01, 10.14it/s][A
+eval:  79% 34/43 [00:02<00:01,  8.60it/s][A
+eval:  91% 39/43 [00:02<00:00, 11.37it/s][A
+eval:  98% 42/43 [00:02<00:00, 13.88it/s][Aeval: 100% 43/43 [00:02<00:00, 17.26it/s]
+eval:  67% 6/9 [01:09<00:34, 11.64s/it]
+eval:   0% 0/32 [00:00<?, ?it/s][A
+eval:  12% 4/32 [00:00<00:00, 30.71it/s][A
+eval:  28% 9/32 [00:00<00:00, 31.65it/s][A
+eval:  34% 11/32 [00:00<00:02,  9.43it/s][A
+eval:  44% 14/32 [00:00<00:01, 11.79it/s][A
+eval:  56% 18/32 [00:01<00:00, 14.17it/s][A
+eval:  69% 22/32 [00:01<00:00, 16.80it/s][A
+eval:  78% 25/32 [00:01<00:00,  9.16it/s][A
+eval:  91% 29/32 [00:02<00:00, 11.75it/s][Aeval: 100% 32/32 [00:02<00:00, 15.11it/s]
+eval:  78% 7/9 [01:22<00:23, 11.88s/it]
+eval:   0% 0/26 [00:00<?, ?it/s][A
+eval:  12% 3/26 [00:00<00:00, 24.12it/s][A
+eval:  23% 6/26 [00:00<00:00, 25.34it/s][A
+eval:  35% 9/26 [00:00<00:00, 24.49it/s][A
+eval:  42% 11/26 [00:00<00:00, 18.24it/s][A
+eval:  50% 13/26 [00:00<00:01,  9.63it/s][A
+eval:  58% 15/26 [00:01<00:01,  9.55it/s][A
+eval:  65% 17/26 [00:01<00:00, 11.10it/s][A
+eval:  73% 19/26 [00:01<00:00,  7.06it/s][A
+eval:  88% 23/26 [00:02<00:00,  7.87it/s][Aeval: 100% 26/26 [00:02<00:00, 11.60it/s]
+eval:  89% 8/9 [01:33<00:11, 11.76s/it]
+eval:   0% 0/33 [00:00<?, ?it/s][A
+eval:  15% 5/33 [00:00<00:00, 46.25it/s][A
+eval:  27% 9/33 [00:00<00:00, 38.74it/s][A
+eval:  33% 11/33 [00:00<00:02,  7.94it/s][A
+eval:  45% 15/33 [00:01<00:01, 10.18it/s][A
+eval:  58% 19/33 [00:01<00:01,  9.33it/s][A
+eval:  64% 21/33 [00:01<00:01, 10.74it/s][A
+eval:  70% 23/33 [00:01<00:00, 12.27it/s][A
+eval:  76% 25/33 [00:01<00:00, 12.69it/s][A
+eval:  88% 29/33 [00:02<00:00, 15.87it/s][A
+eval: 100% 33/33 [00:02<00:00, 19.17it/s][Aeval: 100% 33/33 [00:02<00:00, 14.98it/s]
+eval: 100% 9/9 [01:44<00:00, 11.52s/it]eval: 100% 9/9 [01:44<00:00, 11.63s/it]
+[seed] = 1588147245
+[deterministic] = False
+[data]
+  [num_workers] = 16
+  [num_classes] = 3
+  [num_shapes] = 1
+[dataset]
+  [func] = <class 'datasets.shapenet.ShapeNet'>
+  [root] = /scratch/fs47816/point_cloud_data/plant_data
+  [with_normal] = False
+  [with_one_hot_shape_id] = True
+  [normalize] = True
+  [jitter] = True
+  [num_points] = 2048
+  [split] = test
+[evaluate]
+  [fn] = <function evaluate at 0x2ac779186830>
+  [num_votes] = 1
+  [dataset]
+    [split] = test
+  [best_checkpoint_path] = runs/shapenet.pvcnn.c1/best.pth.tar
+  [predictions_path] = runs/shapenet.pvcnn.c1/best.predictions
+  [stats_path] = runs/shapenet.pvcnn.c1/best.eval.npy
+[train]
+  [num_epochs] = 500
+  [batch_size] = 32
+  [meters]
+    [acc/iou_{}]
+      [func] = <class 'meters.shapenet.MeterShapeNet'>
+      [num_classes] = 3
+  [metric] = acc/iou_test
+  [criterion]
+    [func] = <class 'torch.nn.modules.loss.CrossEntropyLoss'>
+  [optimizer]
+    [func] = <class 'torch.optim.adam.Adam'>
+    [lr] = 0.001
+  [scheduler]
+    [func] = <class 'torch.optim.lr_scheduler.CosineAnnealingLR'>
+    [T_max] = 500
+  [save_path] = runs/shapenet.pvcnn.c1
+[model]
+  [func] = <class 'models.shapenet.pvcnn.PVCNN'>
+  [num_classes] = 3
+  [num_shapes] = 1
+  [extra_feature_channels] = 0
+[device] = cuda
+[device_ids] = [0]
+
+==> loading dataset "[func] = <class 'datasets.shapenet.ShapeNet'>
+[root] = /scratch/fs47816/point_cloud_data/plant_data
+[with_normal] = False
+[with_one_hot_shape_id] = True
+[normalize] = True
+[jitter] = True
+[num_points] = 2048
+[split] = test"
+
+==> creating model "[func] = <class 'models.shapenet.pvcnn.PVCNN'>
+[num_classes] = 3
+[num_shapes] = 1
+[extra_feature_channels] = 0"
+==> loading checkpoint "runs/shapenet.pvcnn.c1/best.pth.tar"
+shapeIoU:    78.86
+clssPrec:    95.24     80.18     90.94
+clssRecall:    94.48     83.86     87.08
+clssIoU:    89.99     67.74     78.86
+Accuracy: 91.08
+meanIoU: 78.86

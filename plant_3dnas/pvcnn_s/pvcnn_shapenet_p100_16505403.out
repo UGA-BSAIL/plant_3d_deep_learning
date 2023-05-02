@@ -1,0 +1,50 @@
+==> loading configs from ['configs/shapenet/pvcnn/c1.py']
+/apps/eb/Python/3.8.6-GCCcore-10.2.0/lib/python3.8/site-packages/setuptools/distutils_patch.py:25: UserWarning: Distutils was imported before Setuptools. This usage is discouraged and may exhibit undesirable behaviors or errors. Please use Setuptools' objects directly or at least import Setuptools first.
+  warnings.warn(
+/apps/eb/PyTorch/1.10.0-fosscuda-2020b-Python-3.8.6/lib/python3.8/site-packages/torch/utils/cpp_extension.py:295: UserWarning: 
+
+                               !! WARNING !!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Your compiler (c++) is not compatible with the compiler Pytorch was
+built with for this platform, which is g++ on linux. Please
+use g++ to to compile your extension. Alternatively, you may
+compile PyTorch from source using c++, and then you can also use
+c++ to compile your extension.
+
+See https://github.com/pytorch/pytorch/blob/master/CONTRIBUTING.md for help
+with compiling PyTorch from source.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+                              !! WARNING !!
+
+  warnings.warn(WRONG_COMPILER_WARNING.format(
+Traceback (most recent call last):
+  File "train.py", line 270, in <module>
+    main()
+  File "train.py", line 79, in main
+    configs = prepare()
+  File "train.py", line 24, in prepare
+    configs.update_from_modules(*args.configs)
+  File "/scratch/fs47816/workdir/sample_scripts/pvcnn_s/pvcnn/utils/config.py", line 113, in update_from_modules
+    importlib.import_module(module)
+  File "/apps/eb/Python/3.8.6-GCCcore-10.2.0/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/scratch/fs47816/workdir/sample_scripts/pvcnn_s/pvcnn/configs/shapenet/pvcnn/__init__.py", line 3, in <module>
+    from models.shapenet import PVCNN
+  File "/scratch/fs47816/workdir/sample_scripts/pvcnn_s/pvcnn/models/shapenet/__init__.py", line 3, in <module>
+    from models.shapenet.pvcnn import PVCNN
+  File "/scratch/fs47816/workdir/sample_scripts/pvcnn_s/pvcnn/models/shapenet/pvcnn.py", line 30
+    blocks = ((64, 1, 128),(256, 1, 128),(512, 1, 128), ,(256, 1, 128), ,(64, 1, 128)) #, (64, 2, 80), (512, 1, None), (2048, 1, None))
+                                                        ^
+SyntaxError: invalid syntax

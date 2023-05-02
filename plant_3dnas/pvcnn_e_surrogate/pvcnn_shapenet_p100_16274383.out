@@ -1,0 +1,540 @@
+==> loading configs from ['configs/shapenet/pvcnn/c1.py']
+/apps/eb/Python/3.8.6-GCCcore-10.2.0/lib/python3.8/site-packages/setuptools/distutils_patch.py:25: UserWarning: Distutils was imported before Setuptools. This usage is discouraged and may exhibit undesirable behaviors or errors. Please use Setuptools' objects directly or at least import Setuptools first.
+  warnings.warn(
+/apps/eb/PyTorch/1.10.0-fosscuda-2020b-Python-3.8.6/lib/python3.8/site-packages/torch/utils/cpp_extension.py:295: UserWarning: 
+
+                               !! WARNING !!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Your compiler (c++) is not compatible with the compiler Pytorch was
+built with for this platform, which is g++ on linux. Please
+use g++ to to compile your extension. Alternatively, you may
+compile PyTorch from source using c++, and then you can also use
+c++ to compile your extension.
+
+See https://github.com/pytorch/pytorch/blob/master/CONTRIBUTING.md for help
+with compiling PyTorch from source.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+                              !! WARNING !!
+
+  warnings.warn(WRONG_COMPILER_WARNING.format(
+2022-12-26 16:13:01.438351: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+[seed] = 1588147245
+[deterministic] = False
+[data]
+  [num_workers] = 1
+  [num_classes] = 3
+  [num_shapes] = 1
+[dataset]
+  [func] = <class 'datasets.shapenet.ShapeNet'>
+  [root] = /scratch/fs47816/point_cloud_data/shapenetcore_partanno_segmentation_benchmark_v0_normal
+  [with_normal] = False
+  [with_one_hot_shape_id] = True
+  [normalize] = True
+  [jitter] = False
+  [num_points] = 100000
+[evaluate] = None
+[train]
+  [num_epochs] = 600
+  [batch_size] = 1
+  [meters]
+    [acc/iou_{}]
+      [func] = <class 'meters.shapenet.MeterShapeNet'>
+      [num_classes] = 3
+  [metric] = acc/iou_test
+  [criterion]
+    [func] = <class 'torch.nn.modules.loss.CrossEntropyLoss'>
+  [optimizer]
+    [func] = <class 'torch.optim.adam.Adam'>
+    [lr] = 0.001
+  [scheduler]
+    [func] = <class 'torch.optim.lr_scheduler.CosineAnnealingLR'>
+    [T_max] = 600
+  [save_path] = runs/shapenet.pvcnn.c1
+  [metrics] = ['acc/iou_test']
+  [checkpoint_path] = runs/shapenet.pvcnn.c1/latest.pth.tar
+  [checkpoints_path] = runs/shapenet.pvcnn.c1/latest/e{}.pth.tar
+  [best_checkpoint_path] = runs/shapenet.pvcnn.c1/best.pth.tar
+  [best_checkpoint_paths] = {'acc/iou_test': 'runs/shapenet.pvcnn.c1/best/best.acc.iou_test.pth.tar'}
+[model]
+  [func] = <class 'models.shapenet.pvcnn.PVCNN'>
+  [num_classes] = 3
+  [num_shapes] = 1
+  [extra_feature_channels] = 0
+[device] = cuda
+[device_ids] = [0]
+
+==> loading dataset "[func] = <class 'datasets.shapenet.ShapeNet'>
+[root] = /scratch/fs47816/point_cloud_data/shapenetcore_partanno_segmentation_benchmark_v0_normal
+[with_normal] = False
+[with_one_hot_shape_id] = True
+[normalize] = True
+[jitter] = False
+[num_points] = 100000"
+
+==> creating model "[func] = <class 'models.shapenet.pvcnn.PVCNN'>
+[num_classes] = 3
+[num_shapes] = 1
+[extra_feature_channels] = 0"
+############################## bigger network: 
+############################################ row:  0 ## in_channels:  3 #### out_channels:  32
+############################################ row:  0 ## in_channels:  3 #### out_channels:  64
+############################################ row:  0 ## in_channels:  3 #### out_channels:  128
+############################################ row:  0 ## in_channels:  3 #### out_channels:  256
+############################################ row:  0 ## in_channels:  3 #### out_channels:  512
+############################### PRINTING BEFORE
+################ i : 0 ########## j:  0  ##### self.layer_ops[i][j].in_channels 3 #### self.layer_ops[i][j].out_channels 32
+################ i : 0 ########## j:  1  ##### self.layer_ops[i][j].in_channels 3 #### self.layer_ops[i][j].out_channels 64
+################ i : 0 ########## j:  2  ##### self.layer_ops[i][j].in_channels 3 #### self.layer_ops[i][j].out_channels 128
+################ i : 0 ########## j:  3  ##### self.layer_ops[i][j].in_channels 3 #### self.layer_ops[i][j].out_channels 256
+################ i : 0 ########## j:  4  ##### self.layer_ops[i][j].in_channels 3 #### self.layer_ops[i][j].out_channels 512
+############################################ row:  1 ## in_channels:  32 #### out_channels:  32
+############################################ row:  1 ## in_channels:  32 #### out_channels:  64
+############################################ row:  1 ## in_channels:  32 #### out_channels:  128
+############################################ row:  1 ## in_channels:  32 #### out_channels:  256
+############################################ row:  1 ## in_channels:  32 #### out_channels:  512
+############################################ row:  1 ## in_channels:  64 #### out_channels:  32
+############################################ row:  1 ## in_channels:  64 #### out_channels:  64
+############################################ row:  1 ## in_channels:  64 #### out_channels:  128
+############################################ row:  1 ## in_channels:  64 #### out_channels:  256
+############################################ row:  1 ## in_channels:  64 #### out_channels:  512
+############################################ row:  1 ## in_channels:  128 #### out_channels:  32
+############################################ row:  1 ## in_channels:  128 #### out_channels:  64
+############################################ row:  1 ## in_channels:  128 #### out_channels:  128
+############################################ row:  1 ## in_channels:  128 #### out_channels:  256
+############################################ row:  1 ## in_channels:  128 #### out_channels:  512
+############################################ row:  1 ## in_channels:  256 #### out_channels:  32
+############################################ row:  1 ## in_channels:  256 #### out_channels:  64
+############################################ row:  1 ## in_channels:  256 #### out_channels:  128
+############################################ row:  1 ## in_channels:  256 #### out_channels:  256
+############################################ row:  1 ## in_channels:  256 #### out_channels:  512
+############################################ row:  1 ## in_channels:  512 #### out_channels:  32
+############################################ row:  1 ## in_channels:  512 #### out_channels:  64
+############################################ row:  1 ## in_channels:  512 #### out_channels:  128
+############################################ row:  1 ## in_channels:  512 #### out_channels:  256
+############################################ row:  1 ## in_channels:  512 #### out_channels:  512
+############################################ row:  2 ## in_channels:  32 #### out_channels:  32
+############################################ row:  2 ## in_channels:  32 #### out_channels:  64
+############################################ row:  2 ## in_channels:  32 #### out_channels:  128
+############################################ row:  2 ## in_channels:  32 #### out_channels:  256
+############################################ row:  2 ## in_channels:  32 #### out_channels:  512
+############################################ row:  2 ## in_channels:  64 #### out_channels:  32
+############################################ row:  2 ## in_channels:  64 #### out_channels:  64
+############################################ row:  2 ## in_channels:  64 #### out_channels:  128
+############################################ row:  2 ## in_channels:  64 #### out_channels:  256
+############################################ row:  2 ## in_channels:  64 #### out_channels:  512
+############################################ row:  2 ## in_channels:  128 #### out_channels:  32
+############################################ row:  2 ## in_channels:  128 #### out_channels:  64
+############################################ row:  2 ## in_channels:  128 #### out_channels:  128
+############################################ row:  2 ## in_channels:  128 #### out_channels:  256
+############################################ row:  2 ## in_channels:  128 #### out_channels:  512
+############################################ row:  2 ## in_channels:  256 #### out_channels:  32
+############################################ row:  2 ## in_channels:  256 #### out_channels:  64
+############################################ row:  2 ## in_channels:  256 #### out_channels:  128
+############################################ row:  2 ## in_channels:  256 #### out_channels:  256
+############################################ row:  2 ## in_channels:  256 #### out_channels:  512
+############################################ row:  2 ## in_channels:  512 #### out_channels:  32
+############################################ row:  2 ## in_channels:  512 #### out_channels:  64
+############################################ row:  2 ## in_channels:  512 #### out_channels:  128
+############################################ row:  2 ## in_channels:  512 #### out_channels:  256
+############################################ row:  2 ## in_channels:  512 #### out_channels:  512
+############################################ row:  3 ## in_channels:  32 #### out_channels:  32
+############################################ row:  3 ## in_channels:  32 #### out_channels:  64
+############################################ row:  3 ## in_channels:  32 #### out_channels:  128
+############################################ row:  3 ## in_channels:  32 #### out_channels:  256
+############################################ row:  3 ## in_channels:  32 #### out_channels:  512
+############################################ row:  3 ## in_channels:  64 #### out_channels:  32
+############################################ row:  3 ## in_channels:  64 #### out_channels:  64
+############################################ row:  3 ## in_channels:  64 #### out_channels:  128
+############################################ row:  3 ## in_channels:  64 #### out_channels:  256
+############################################ row:  3 ## in_channels:  64 #### out_channels:  512
+############################################ row:  3 ## in_channels:  128 #### out_channels:  32
+############################################ row:  3 ## in_channels:  128 #### out_channels:  64
+############################################ row:  3 ## in_channels:  128 #### out_channels:  128
+############################################ row:  3 ## in_channels:  128 #### out_channels:  256
+############################################ row:  3 ## in_channels:  128 #### out_channels:  512
+############################################ row:  3 ## in_channels:  256 #### out_channels:  32
+############################################ row:  3 ## in_channels:  256 #### out_channels:  64
+############################################ row:  3 ## in_channels:  256 #### out_channels:  128
+############################################ row:  3 ## in_channels:  256 #### out_channels:  256
+############################################ row:  3 ## in_channels:  256 #### out_channels:  512
+############################################ row:  3 ## in_channels:  512 #### out_channels:  32
+############################################ row:  3 ## in_channels:  512 #### out_channels:  64
+############################################ row:  3 ## in_channels:  512 #### out_channels:  128
+############################################ row:  3 ## in_channels:  512 #### out_channels:  256
+############################################ row:  3 ## in_channels:  512 #### out_channels:  512
+############################################ row:  4 ## in_channels:  32 #### out_channels:  32
+############################################ row:  4 ## in_channels:  32 #### out_channels:  64
+############################################ row:  4 ## in_channels:  32 #### out_channels:  128
+############################################ row:  4 ## in_channels:  32 #### out_channels:  256
+############################################ row:  4 ## in_channels:  32 #### out_channels:  512
+############################################ row:  4 ## in_channels:  64 #### out_channels:  32
+############################################ row:  4 ## in_channels:  64 #### out_channels:  64
+############################################ row:  4 ## in_channels:  64 #### out_channels:  128
+############################################ row:  4 ## in_channels:  64 #### out_channels:  256
+############################################ row:  4 ## in_channels:  64 #### out_channels:  512
+############################################ row:  4 ## in_channels:  128 #### out_channels:  32
+############################################ row:  4 ## in_channels:  128 #### out_channels:  64
+############################################ row:  4 ## in_channels:  128 #### out_channels:  128
+############################################ row:  4 ## in_channels:  128 #### out_channels:  256
+############################################ row:  4 ## in_channels:  128 #### out_channels:  512
+############################################ row:  4 ## in_channels:  256 #### out_channels:  32
+############################################ row:  4 ## in_channels:  256 #### out_channels:  64
+############################################ row:  4 ## in_channels:  256 #### out_channels:  128
+############################################ row:  4 ## in_channels:  256 #### out_channels:  256
+############################################ row:  4 ## in_channels:  256 #### out_channels:  512
+############################################ row:  4 ## in_channels:  512 #### out_channels:  32
+############################################ row:  4 ## in_channels:  512 #### out_channels:  64
+############################################ row:  4 ## in_channels:  512 #### out_channels:  128
+############################################ row:  4 ## in_channels:  512 #### out_channels:  256
+############################################ row:  4 ## in_channels:  512 #### out_channels:  512
+############################### PRINTING
+################ i : 0 ########## j:  0  ##### self.layer_ops[i][j].in_channels 3 #### self.layer_ops[i][j].out_channels 32
+################ i : 0 ########## j:  1  ##### self.layer_ops[i][j].in_channels 3 #### self.layer_ops[i][j].out_channels 64
+################ i : 0 ########## j:  2  ##### self.layer_ops[i][j].in_channels 3 #### self.layer_ops[i][j].out_channels 128
+################ i : 0 ########## j:  3  ##### self.layer_ops[i][j].in_channels 3 #### self.layer_ops[i][j].out_channels 256
+################ i : 0 ########## j:  4  ##### self.layer_ops[i][j].in_channels 3 #### self.layer_ops[i][j].out_channels 512
+################ i : 1 ########## j:  0  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 32
+################ i : 1 ########## j:  1  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 64
+################ i : 1 ########## j:  2  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 128
+################ i : 1 ########## j:  3  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 256
+################ i : 1 ########## j:  4  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 512
+################ i : 1 ########## j:  5  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 32
+################ i : 1 ########## j:  6  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 64
+################ i : 1 ########## j:  7  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 128
+################ i : 1 ########## j:  8  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 256
+################ i : 1 ########## j:  9  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 512
+################ i : 1 ########## j:  10  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 32
+################ i : 1 ########## j:  11  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 64
+################ i : 1 ########## j:  12  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 128
+################ i : 1 ########## j:  13  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 256
+################ i : 1 ########## j:  14  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 512
+################ i : 1 ########## j:  15  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 32
+################ i : 1 ########## j:  16  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 64
+################ i : 1 ########## j:  17  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 128
+################ i : 1 ########## j:  18  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 256
+################ i : 1 ########## j:  19  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 512
+################ i : 1 ########## j:  20  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 32
+################ i : 1 ########## j:  21  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 64
+################ i : 1 ########## j:  22  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 128
+################ i : 1 ########## j:  23  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 256
+################ i : 1 ########## j:  24  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 512
+################ i : 2 ########## j:  0  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 32
+################ i : 2 ########## j:  1  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 64
+################ i : 2 ########## j:  2  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 128
+################ i : 2 ########## j:  3  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 256
+################ i : 2 ########## j:  4  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 512
+################ i : 2 ########## j:  5  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 32
+################ i : 2 ########## j:  6  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 64
+################ i : 2 ########## j:  7  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 128
+################ i : 2 ########## j:  8  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 256
+################ i : 2 ########## j:  9  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 512
+################ i : 2 ########## j:  10  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 32
+################ i : 2 ########## j:  11  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 64
+################ i : 2 ########## j:  12  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 128
+################ i : 2 ########## j:  13  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 256
+################ i : 2 ########## j:  14  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 512
+################ i : 2 ########## j:  15  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 32
+################ i : 2 ########## j:  16  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 64
+################ i : 2 ########## j:  17  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 128
+################ i : 2 ########## j:  18  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 256
+################ i : 2 ########## j:  19  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 512
+################ i : 2 ########## j:  20  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 32
+################ i : 2 ########## j:  21  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 64
+################ i : 2 ########## j:  22  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 128
+################ i : 2 ########## j:  23  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 256
+################ i : 2 ########## j:  24  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 512
+################ i : 3 ########## j:  0  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 32
+################ i : 3 ########## j:  1  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 64
+################ i : 3 ########## j:  2  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 128
+################ i : 3 ########## j:  3  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 256
+################ i : 3 ########## j:  4  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 512
+################ i : 3 ########## j:  5  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 32
+################ i : 3 ########## j:  6  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 64
+################ i : 3 ########## j:  7  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 128
+################ i : 3 ########## j:  8  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 256
+################ i : 3 ########## j:  9  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 512
+################ i : 3 ########## j:  10  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 32
+################ i : 3 ########## j:  11  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 64
+################ i : 3 ########## j:  12  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 128
+################ i : 3 ########## j:  13  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 256
+################ i : 3 ########## j:  14  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 512
+################ i : 3 ########## j:  15  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 32
+################ i : 3 ########## j:  16  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 64
+################ i : 3 ########## j:  17  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 128
+################ i : 3 ########## j:  18  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 256
+################ i : 3 ########## j:  19  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 512
+################ i : 3 ########## j:  20  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 32
+################ i : 3 ########## j:  21  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 64
+################ i : 3 ########## j:  22  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 128
+################ i : 3 ########## j:  23  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 256
+################ i : 3 ########## j:  24  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 512
+################ i : 4 ########## j:  0  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 32
+################ i : 4 ########## j:  1  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 64
+################ i : 4 ########## j:  2  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 128
+################ i : 4 ########## j:  3  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 256
+################ i : 4 ########## j:  4  ##### self.layer_ops[i][j].in_channels 32 #### self.layer_ops[i][j].out_channels 512
+################ i : 4 ########## j:  5  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 32
+################ i : 4 ########## j:  6  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 64
+################ i : 4 ########## j:  7  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 128
+################ i : 4 ########## j:  8  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 256
+################ i : 4 ########## j:  9  ##### self.layer_ops[i][j].in_channels 64 #### self.layer_ops[i][j].out_channels 512
+################ i : 4 ########## j:  10  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 32
+################ i : 4 ########## j:  11  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 64
+################ i : 4 ########## j:  12  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 128
+################ i : 4 ########## j:  13  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 256
+################ i : 4 ########## j:  14  ##### self.layer_ops[i][j].in_channels 128 #### self.layer_ops[i][j].out_channels 512
+################ i : 4 ########## j:  15  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 32
+################ i : 4 ########## j:  16  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 64
+################ i : 4 ########## j:  17  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 128
+################ i : 4 ########## j:  18  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 256
+################ i : 4 ########## j:  19  ##### self.layer_ops[i][j].in_channels 256 #### self.layer_ops[i][j].out_channels 512
+################ i : 4 ########## j:  20  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 32
+################ i : 4 ########## j:  21  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 64
+################ i : 4 ########## j:  22  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 128
+################ i : 4 ########## j:  23  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 256
+################ i : 4 ########## j:  24  ##### self.layer_ops[i][j].in_channels 512 #### self.layer_ops[i][j].out_channels 512
+==> loading checkpoint "runs/shapenet.pvcnn.c1/latest.pth.tar"
+ => loading model
+ => loading optimizer
+==> creating scheduler "[func] = <class 'torch.optim.lr_scheduler.CosineAnnealingLR'>
+[T_max] = 600
+[last_epoch] = 599"
+:############################################## arch num: 0 ########## channel vals: [1, 4]
+############################################ row:  0 ## in_channels:  3 #### out_channels:  64
+############################################ row:  0 ## in_channels:  64 #### out_channels:  512
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  5232556032
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  5232556032
+test:   0% 0/9 [00:00<?, ?it/s]test:  11% 1/9 [00:16<02:13, 16.74s/it]test:  22% 2/9 [00:19<00:58,  8.41s/it]test:  33% 3/9 [00:21<00:34,  5.74s/it]test:  44% 4/9 [00:24<00:22,  4.47s/it]test:  56% 5/9 [00:26<00:15,  3.77s/it]test:  67% 6/9 [00:29<00:10,  3.35s/it]test:  78% 7/9 [00:31<00:06,  3.07s/it]test:  89% 8/9 [00:34<00:03,  3.05s/it]test: 100% 9/9 [00:37<00:00,  2.90s/it]test: 100% 9/9 [00:37<00:00,  4.18s/it]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ for debugging ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+times: [14.237747192382812, 2.573742151260376, 2.5634942054748535, 2.532970905303955, 2.5271267890930176, 2.527418613433838, 2.50602126121521, 2.5049378871917725, 2.5178072452545166]
+mem: [18892073472, 9191850496, 9191850496, 9191850496, 9191850496, 9191850496, 9191850496, 9191850496, 9191850496]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  9191850496
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  9191850496
+test:   0% 0/9 [00:00<?, ?it/s]test:  11% 1/9 [00:03<00:28,  3.55s/it]test:  22% 2/9 [00:04<00:12,  1.83s/it]test:  33% 3/9 [00:06<00:12,  2.16s/it]test:  44% 4/9 [00:10<00:14,  2.81s/it]test:  56% 5/9 [00:12<00:10,  2.68s/it]test:  67% 6/9 [00:14<00:06,  2.32s/it]test:  78% 7/9 [00:18<00:05,  2.73s/it]test:  89% 8/9 [00:21<00:02,  2.76s/it]test: 100% 9/9 [00:23<00:00,  2.62s/it]test: 100% 9/9 [00:23<00:00,  2.59s/it]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ for debugging ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+times: [0.4214801788330078, 0.21522164344787598, 0.224104642868042, 0.2116999626159668, 0.21208977699279785, 0.19896173477172852, 0.18571186065673828, 0.1847391128540039, 0.20667099952697754]
+mem: [11152721920, 1925176832, 1924290560, 1924708864, 1925176832, 1924290560, 1924708864, 1925176832, 1924290560]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ sd:::  [[6.40000000e+01 5.12000000e+02 0.00000000e+00 0.00000000e+00
+  0.00000000e+00 0.00000000e+00 3.83236292e+00 1.02696530e+10
+  5.23080187e-01]]
+################### Currently sampled arch: ###
+######### currently sampled random arch: [1, 4]
+######### currently sampled arch: Time consumption: 3.8323629167344837
+######### currently sampled arch: Memory consumption: 10269653048.88889
+######### currently sampled arch: IoU: 0.523080187034873
+##### constraints satisfied ########################## arch number:  0  ##############################################################
+:############################################## arch num: 1 ########## channel vals: [1, 3, 1, 2, 2]
+############################################ row:  0 ## in_channels:  3 #### out_channels:  64
+############################################ row:  0 ## in_channels:  64 #### out_channels:  256
+############################################ row:  0 ## in_channels:  256 #### out_channels:  64
+############################################ row:  0 ## in_channels:  64 #### out_channels:  128
+############################################ row:  0 ## in_channels:  128 #### out_channels:  128
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  1924290560
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  1924290560
+test:   0% 0/9 [00:00<?, ?it/s]test:  11% 1/9 [00:09<01:12,  9.06s/it]test:  22% 2/9 [00:10<00:31,  4.50s/it]test:  33% 3/9 [00:11<00:18,  3.03s/it]test:  44% 4/9 [00:14<00:15,  3.10s/it]test:  56% 5/9 [00:17<00:11,  2.90s/it]test:  67% 6/9 [00:18<00:07,  2.44s/it]test:  78% 7/9 [00:22<00:05,  2.82s/it]test:  89% 8/9 [00:25<00:02,  2.70s/it]test: 100% 9/9 [00:27<00:00,  2.58s/it]test: 100% 9/9 [00:27<00:00,  3.04s/it]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ for debugging ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+times: [5.669617176055908, 1.3049931526184082, 1.2938973903656006, 1.2637102603912354, 1.241471529006958, 1.2434089183807373, 1.2362494468688965, 1.2109758853912354, 1.2267742156982422]
+mem: [7315335680, 5600659968, 5600659968, 5600659968, 5600659968, 5600659968, 5600659968, 5600659968, 5600659968]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  5600659968
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  5600659968
+test:   0% 0/9 [00:00<?, ?it/s]test:  11% 1/9 [00:03<00:30,  3.75s/it]test:  22% 2/9 [00:04<00:13,  1.98s/it]test:  33% 3/9 [00:07<00:13,  2.24s/it]test:  44% 4/9 [00:10<00:14,  2.88s/it]test:  56% 5/9 [00:13<00:10,  2.61s/it]test:  67% 6/9 [00:14<00:07,  2.36s/it]test:  78% 7/9 [00:18<00:05,  2.67s/it]test:  89% 8/9 [00:21<00:02,  2.71s/it]test: 100% 9/9 [00:23<00:00,  2.58s/it]test: 100% 9/9 [00:23<00:00,  2.59s/it]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ for debugging ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+times: [0.3665602207183838, 0.28119397163391113, 0.2879295349121094, 0.2545320987701416, 0.269650936126709, 0.2428140640258789, 0.23641180992126465, 0.22355961799621582, 0.25143909454345703]
+mem: [3819307520, 1899016704, 1899016704, 1899016704, 1899016704, 1899016704, 1899016704, 1899016704, 1899016704]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ sd:::  [[6.40000000e+01 2.56000000e+02 6.40000000e+01 1.28000000e+02
+  1.28000000e+02 0.00000000e+00 1.74345533e+00 5.79117949e+09
+  5.08300933e-01]]
+################### Currently sampled arch: ###
+######### currently sampled random arch: [1, 3, 1, 2, 2]
+######### currently sampled arch: Time consumption: 1.7434553305308025
+######### currently sampled arch: Memory consumption: 5791179491.555555
+######### currently sampled arch: IoU: 0.5083009331400261
+##### constraints satisfied ########################## arch number:  1  ##############################################################
+:############################################## arch num: 2 ########## channel vals: [1, 2, 0, 0, 4]
+############################################ row:  0 ## in_channels:  3 #### out_channels:  64
+############################################ row:  0 ## in_channels:  64 #### out_channels:  128
+############################################ row:  0 ## in_channels:  128 #### out_channels:  32
+############################################ row:  0 ## in_channels:  32 #### out_channels:  32
+############################################ row:  0 ## in_channels:  32 #### out_channels:  512
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  1899016704
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  1899016704
+test:   0% 0/9 [00:00<?, ?it/s]test:  11% 1/9 [00:06<00:55,  6.99s/it]test:  22% 2/9 [00:09<00:30,  4.43s/it]test:  33% 3/9 [00:12<00:21,  3.60s/it]test:  44% 4/9 [00:14<00:15,  3.20s/it]test:  56% 5/9 [00:17<00:11,  2.97s/it]test:  67% 6/9 [00:19<00:08,  2.83s/it]test:  78% 7/9 [00:22<00:05,  2.73s/it]test:  89% 8/9 [00:25<00:02,  2.67s/it]test: 100% 9/9 [00:27<00:00,  2.63s/it]test: 100% 9/9 [00:27<00:00,  3.07s/it]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ for debugging ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+times: [3.598111152648926, 2.632382392883301, 2.618273973464966, 2.5731332302093506, 2.5645978450775146, 2.56503963470459, 2.5348877906799316, 2.5305919647216797, 2.5509965419769287]
+mem: [9000805888, 9002006016, 9002006016, 9002006016, 9002006016, 9002006016, 9002006016, 9002006016, 9002006016]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  9002006016
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  9002006016
+test:   0% 0/9 [00:00<?, ?it/s]test:  11% 1/9 [00:03<00:30,  3.84s/it]test:  22% 2/9 [00:04<00:13,  1.87s/it]test:  33% 3/9 [00:07<00:13,  2.29s/it]test:  44% 4/9 [00:10<00:14,  2.82s/it]test:  56% 5/9 [00:13<00:11,  2.76s/it]test:  67% 6/9 [00:15<00:07,  2.43s/it]test:  78% 7/9 [00:18<00:05,  2.74s/it]test:  89% 8/9 [00:21<00:02,  2.71s/it]test: 100% 9/9 [00:23<00:00,  2.59s/it]test: 100% 9/9 [00:23<00:00,  2.62s/it]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ for debugging ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+times: [0.35318851470947266, 0.2929356098175049, 0.2982027530670166, 0.274951696395874, 0.27732038497924805, 0.2714991569519043, 0.24598932266235352, 0.24405622482299805, 0.27385854721069336]
+mem: [2099026944, 2001595392, 2001595392, 2001595392, 2001595392, 2001595392, 2001595392, 2001595392, 2001595392]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ sd:::  [[6.40000000e+01 1.28000000e+02 3.20000000e+01 3.20000000e+01
+  5.12000000e+02 0.00000000e+00 2.68533495e+00 9.00187267e+09
+  5.03437884e-01]]
+################### Currently sampled arch: ###
+######### currently sampled random arch: [1, 2, 0, 0, 4]
+######### currently sampled arch: Time consumption: 2.685334947374132
+######### currently sampled arch: Memory consumption: 9001872668.444445
+######### currently sampled arch: IoU: 0.5034378837870346
+##### constraints satisfied ########################## arch number:  2  ##############################################################
+:############################################## arch num: 3 ########## channel vals: [0, 1, 0, 0]
+############################################ row:  0 ## in_channels:  3 #### out_channels:  32
+############################################ row:  0 ## in_channels:  32 #### out_channels:  64
+############################################ row:  0 ## in_channels:  64 #### out_channels:  32
+############################################ row:  0 ## in_channels:  32 #### out_channels:  32
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  2001595392
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  2001595392
+test:   0% 0/9 [00:00<?, ?it/s]test:  11% 1/9 [00:03<00:30,  3.81s/it]test:  22% 2/9 [00:04<00:12,  1.75s/it]test:  33% 3/9 [00:06<00:12,  2.11s/it]test:  44% 4/9 [00:10<00:14,  2.86s/it]test:  56% 5/9 [00:13<00:10,  2.72s/it]test:  67% 6/9 [00:14<00:07,  2.40s/it]test:  78% 7/9 [00:18<00:05,  2.67s/it]test:  89% 8/9 [00:20<00:02,  2.69s/it]test: 100% 9/9 [00:23<00:00,  2.56s/it]test: 100% 9/9 [00:23<00:00,  2.58s/it]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ for debugging ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+times: [0.42624354362487793, 0.1513206958770752, 0.16042566299438477, 0.15072917938232422, 0.15422940254211426, 0.14482545852661133, 0.1466059684753418, 0.1464245319366455, 0.14751029014587402]
+mem: [1897921536, 1900081664, 1899150336, 1900081664, 1899150336, 1900081664, 1899150336, 1900081664, 1899150336]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  1899150336
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  1899150336
+test:   0% 0/9 [00:00<?, ?it/s]test:  11% 1/9 [00:03<00:28,  3.55s/it]test:  22% 2/9 [00:04<00:13,  1.89s/it]test:  33% 3/9 [00:06<00:12,  2.14s/it]test:  44% 4/9 [00:11<00:14,  2.99s/it]test:  56% 5/9 [00:13<00:10,  2.67s/it]test:  67% 6/9 [00:14<00:07,  2.36s/it]test:  78% 7/9 [00:18<00:05,  2.73s/it]test:  89% 8/9 [00:20<00:02,  2.67s/it]test: 100% 9/9 [00:23<00:00,  2.55s/it]test: 100% 9/9 [00:23<00:00,  2.58s/it]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ for debugging ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+times: [0.09756183624267578, 0.07999038696289062, 0.07910561561584473, 0.07261991500854492, 0.07622432708740234, 0.07034921646118164, 0.07033467292785645, 0.06479334831237793, 0.06978058815002441]
+mem: [1704465920, 1705870848, 1705568256, 1705870848, 1705568256, 1705870848, 1705568256, 1705870848, 1705568256]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ sd:::  [[3.20000000e+01 6.40000000e+01 3.20000000e+01 3.20000000e+01
+  0.00000000e+00 0.00000000e+00 1.80923859e-01 1.89942773e+09
+  4.78911857e-01]]
+################### Currently sampled arch: ###
+######### currently sampled random arch: [0, 1, 0, 0]
+######### currently sampled arch: Time consumption: 0.180923859278361
+######### currently sampled arch: Memory consumption: 1899427726.2222223
+######### currently sampled arch: IoU: 0.4789118572500397
+##### constraints satisfied ########################## arch number:  3  ##############################################################
+:############################################## arch num: 4 ########## channel vals: [1, 3]
+############################################ row:  0 ## in_channels:  3 #### out_channels:  64
+############################################ row:  0 ## in_channels:  64 #### out_channels:  256
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  1705568256
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  1705568256
+test:   0% 0/9 [00:00<?, ?it/s]test:  11% 1/9 [00:04<00:37,  4.69s/it]test:  22% 2/9 [00:05<00:16,  2.41s/it]test:  33% 3/9 [00:07<00:13,  2.24s/it]test:  44% 4/9 [00:11<00:14,  2.95s/it]test:  56% 5/9 [00:13<00:10,  2.69s/it]test:  67% 6/9 [00:15<00:07,  2.42s/it]test:  78% 7/9 [00:19<00:05,  2.75s/it]test:  89% 8/9 [00:21<00:02,  2.64s/it]test: 100% 9/9 [00:23<00:00,  2.53s/it]test: 100% 9/9 [00:23<00:00,  2.65s/it]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ for debugging ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+times: [0.839576244354248, 0.8243210315704346, 0.8184173107147217, 0.8118996620178223, 0.7940139770507812, 0.794370174407959, 0.7939815521240234, 0.7762072086334229, 0.7876098155975342]
+mem: [4871221760, 4872450560, 4872450560, 4872450560, 4872450560, 4872450560, 4872450560, 4872450560, 4872450560]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  4872450560
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  4872450560
+test:   0% 0/9 [00:00<?, ?it/s]test:  11% 1/9 [00:03<00:28,  3.53s/it]test:  22% 2/9 [00:04<00:15,  2.15s/it]test:  33% 3/9 [00:07<00:13,  2.25s/it]test:  44% 4/9 [00:10<00:13,  2.78s/it]test:  56% 5/9 [00:13<00:10,  2.66s/it]test:  67% 6/9 [00:14<00:07,  2.34s/it]test:  78% 7/9 [00:18<00:05,  2.70s/it]test:  89% 8/9 [00:20<00:02,  2.67s/it]test: 100% 9/9 [00:23<00:00,  2.55s/it]test: 100% 9/9 [00:23<00:00,  2.58s/it]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ for debugging ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+times: [0.13998746871948242, 0.13283252716064453, 0.1454906463623047, 0.1272268295288086, 0.12913298606872559, 0.1150667667388916, 0.10544300079345703, 0.10905146598815918, 0.12074470520019531]
+mem: [1767288320, 1768488448, 1768488448, 1768488448, 1768488448, 1768488448, 1768488448, 1768488448, 1768488448]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ sd:::  [[6.40000000e+01 2.56000000e+02 0.00000000e+00 0.00000000e+00
+  0.00000000e+00 0.00000000e+00 8.04488553e-01 4.87231403e+09
+  5.23174792e-01]]
+################### Currently sampled arch: ###
+######### currently sampled random arch: [1, 3]
+######### currently sampled arch: Time consumption: 0.8044885529412164
+######### currently sampled arch: Memory consumption: 4872314026.666667
+######### currently sampled arch: IoU: 0.5231747916183602
+##### constraints satisfied ########################## arch number:  4  ##############################################################
+:############################################## arch num: 5 ########## channel vals: [1, 4, 2]
+############################################ row:  0 ## in_channels:  3 #### out_channels:  64
+############################################ row:  0 ## in_channels:  64 #### out_channels:  512
+############################################ row:  0 ## in_channels:  512 #### out_channels:  128
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  1768488448
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  1768488448
+test:   0% 0/9 [00:00<?, ?it/s]test:  11% 1/9 [00:08<01:10,  8.86s/it]test:  22% 2/9 [00:12<00:38,  5.53s/it]test:  33% 3/9 [00:15<00:26,  4.46s/it]test:  44% 4/9 [00:18<00:19,  3.95s/it]test:  56% 5/9 [00:21<00:14,  3.66s/it]test:  67% 6/9 [00:24<00:10,  3.48s/it]test:  78% 7/9 [00:27<00:06,  3.36s/it]test:  89% 8/9 [00:30<00:03,  3.28s/it]test: 100% 9/9 [00:34<00:00,  3.24s/it]test: 100% 9/9 [00:34<00:00,  3.79s/it]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ for debugging ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+times: [5.398516654968262, 3.202772378921509, 3.1925113201141357, 3.150477886199951, 3.1406402587890625, 3.1406445503234863, 3.1147403717041016, 3.1160545349121094, 3.131359100341797]
+mem: [9199496192, 9200696320, 9200696320, 9200696320, 9200696320, 9200696320, 9200696320, 9200696320, 9200696320]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  9200696320
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  9200696320
+test:   0% 0/9 [00:00<?, ?it/s]test:  11% 1/9 [00:04<00:32,  4.07s/it]test:  22% 2/9 [00:04<00:13,  1.94s/it]test:  33% 3/9 [00:07<00:13,  2.22s/it]test:  44% 4/9 [00:10<00:14,  2.83s/it]test:  56% 5/9 [00:13<00:10,  2.70s/it]test:  67% 6/9 [00:15<00:07,  2.39s/it]test:  78% 7/9 [00:18<00:05,  2.83s/it]test:  89% 8/9 [00:21<00:02,  2.64s/it]test: 100% 9/9 [00:23<00:00,  2.54s/it]test: 100% 9/9 [00:23<00:00,  2.60s/it]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ for debugging ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+times: [0.35770392417907715, 0.3043203353881836, 0.31093502044677734, 0.29428815841674805, 0.2995486259460449, 0.2732729911804199, 0.27728939056396484, 0.2759218215942383, 0.2855801582336426]
+mem: [4049386496, 1948232704, 1948232704, 1948232704, 1948232704, 1948232704, 1948232704, 1948232704, 1948232704]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ sd:::  [[6.40000000e+01 5.12000000e+02 1.28000000e+02 0.00000000e+00
+  0.00000000e+00 0.00000000e+00 3.39863523e+00 9.20056297e+09
+  5.32607538e-01]]
+################### Currently sampled arch: ###
+######### currently sampled random arch: [1, 4, 2]
+######### currently sampled arch: Time consumption: 3.398635228474935
+######### currently sampled arch: Memory consumption: 9200562972.444445
+######### currently sampled arch: IoU: 0.5326075384765001
+##### constraints satisfied ########################## arch number:  5  ##############################################################
+:############################################## arch num: 6 ########## channel vals: [2, 0, 0, 2, 4]
+############################################ row:  0 ## in_channels:  3 #### out_channels:  128
+############################################ row:  0 ## in_channels:  128 #### out_channels:  32
+############################################ row:  0 ## in_channels:  32 #### out_channels:  32
+############################################ row:  0 ## in_channels:  32 #### out_channels:  128
+############################################ row:  0 ## in_channels:  128 #### out_channels:  512
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  1948232704
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  1948232704
+test:   0% 0/9 [00:00<?, ?it/s]test:  11% 1/9 [00:09<01:15,  9.43s/it]test:  22% 2/9 [00:12<00:39,  5.68s/it]test:  33% 3/9 [00:15<00:26,  4.48s/it]test:  44% 4/9 [00:18<00:19,  3.89s/it]test:  56% 5/9 [00:21<00:14,  3.56s/it]test:  67% 6/9 [00:24<00:10,  3.36s/it]test:  78% 7/9 [00:27<00:06,  3.22s/it]test:  89% 8/9 [00:30<00:03,  3.13s/it]test: 100% 9/9 [00:33<00:00,  3.08s/it]test: 100% 9/9 [00:33<00:00,  3.70s/it]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ for debugging ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+times: [5.569193601608276, 3.0557327270507812, 3.039539098739624, 2.985495090484619, 2.9740793704986572, 2.973558187484741, 2.9380710124969482, 2.9386086463928223, 2.9578001499176025]
+mem: [9837526528, 9838726656, 9838726656, 9838726656, 9838726656, 9838726656, 9838726656, 9838726656, 9838726656]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  9838726656
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  9838726656
+test:   0% 0/9 [00:00<?, ?it/s]test:  11% 1/9 [00:04<00:34,  4.27s/it]test:  22% 2/9 [00:04<00:14,  2.04s/it]test:  33% 3/9 [00:07<00:13,  2.18s/it]test:  44% 4/9 [00:10<00:13,  2.71s/it]test:  56% 5/9 [00:13<00:10,  2.70s/it]test:  67% 6/9 [00:15<00:07,  2.44s/it]test:  78% 7/9 [00:18<00:05,  2.81s/it]test:  89% 8/9 [00:21<00:02,  2.63s/it]test: 100% 9/9 [00:23<00:00,  2.54s/it]test: 100% 9/9 [00:23<00:00,  2.60s/it]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ for debugging ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+times: [0.40409255027770996, 0.32521510124206543, 0.32409071922302246, 0.3138852119445801, 0.29852867126464844, 0.2818119525909424, 0.27336788177490234, 0.27413153648376465, 0.29491710662841797]
+mem: [3947576320, 2077085184, 2077085184, 2077085184, 2077085184, 2077085184, 2077085184, 2077085184, 2077085184]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ sd:::  [[1.28000000e+02 3.20000000e+01 3.20000000e+01 1.28000000e+02
+  5.12000000e+02 0.00000000e+00 3.27023088e+00 9.83859331e+09
+  5.00050632e-01]]
+################### Currently sampled arch: ###
+######### currently sampled random arch: [2, 0, 0, 2, 4]
+######### currently sampled arch: Time consumption: 3.270230876074897
+######### currently sampled arch: Memory consumption: 9838593308.444445
+######### currently sampled arch: IoU: 0.5000506315961923
+##### constraints satisfied ########################## arch number:  6  ##############################################################
+:############################################## arch num: 7 ########## channel vals: [0, 4, 1]
+############################################ row:  0 ## in_channels:  3 #### out_channels:  32
+############################################ row:  0 ## in_channels:  32 #### out_channels:  512
+############################################ row:  0 ## in_channels:  512 #### out_channels:  64
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  2077085184
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  2077085184
+test:   0% 0/9 [00:00<?, ?it/s]test:  11% 1/9 [00:07<01:02,  7.84s/it]test:  22% 2/9 [00:10<00:34,  4.93s/it]test:  33% 3/9 [00:13<00:23,  4.00s/it]test:  44% 4/9 [00:16<00:17,  3.55s/it]test:  56% 5/9 [00:19<00:13,  3.29s/it]test:  67% 6/9 [00:22<00:09,  3.14s/it]test:  78% 7/9 [00:25<00:06,  3.04s/it]test:  89% 8/9 [00:27<00:02,  2.97s/it]test: 100% 9/9 [00:30<00:00,  2.93s/it]test: 100% 9/9 [00:30<00:00,  3.41s/it]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ for debugging ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+times: [4.432204723358154, 2.894805908203125, 2.887850761413574, 2.854811906814575, 2.8461647033691406, 2.848944664001465, 2.8264834880828857, 2.8243861198425293, 2.8408315181732178]
+mem: [8910327808, 8911527936, 8911527936, 8911527936, 8911527936, 8911527936, 8911527936, 8911527936, 8911527936]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  8911527936
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  8911527936
+test:   0% 0/9 [00:00<?, ?it/s]test:  11% 1/9 [00:03<00:30,  3.80s/it]test:  22% 2/9 [00:04<00:12,  1.84s/it]test:  33% 3/9 [00:07<00:13,  2.30s/it]test:  44% 4/9 [00:11<00:15,  3.07s/it]test:  56% 5/9 [00:13<00:10,  2.70s/it]test:  67% 6/9 [00:14<00:06,  2.26s/it]test:  78% 7/9 [00:18<00:05,  2.72s/it]test:  89% 8/9 [00:21<00:02,  2.74s/it]test: 100% 9/9 [00:23<00:00,  2.61s/it]test: 100% 9/9 [00:23<00:00,  2.62s/it]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ for debugging ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+times: [0.3079071044921875, 0.26163434982299805, 0.2808399200439453, 0.25624704360961914, 0.2667508125305176, 0.2540318965911865, 0.24126982688903809, 0.24861693382263184, 0.2615070343017578]
+mem: [2820649472, 1910243840, 1910243840, 1910243840, 1910243840, 1910243840, 1910269440, 1910269440, 1910243840]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ sd:::  [[3.20000000e+01 5.12000000e+02 6.40000000e+01 0.00000000e+00
+  0.00000000e+00 0.00000000e+00 3.02849820e+00 8.91139459e+09
+  5.26835834e-01]]
+################### Currently sampled arch: ###
+######### currently sampled random arch: [0, 4, 1]
+######### currently sampled arch: Time consumption: 3.028498199250963
+######### currently sampled arch: Memory consumption: 8911394588.444445
+######### currently sampled arch: IoU: 0.5268358339262039
+##### constraints satisfied ########################## arch number:  7  ##############################################################
+:############################################## arch num: 8 ########## channel vals: [1, 2, 3, 3, 1]
+############################################ row:  0 ## in_channels:  3 #### out_channels:  64
+############################################ row:  0 ## in_channels:  64 #### out_channels:  128
+############################################ row:  0 ## in_channels:  128 #### out_channels:  256
+############################################ row:  0 ## in_channels:  256 #### out_channels:  256
+############################################ row:  0 ## in_channels:  256 #### out_channels:  64
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  1910243840
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  1910243840
+test:   0% 0/9 [00:00<?, ?it/s]test:  11% 1/9 [00:07<00:56,  7.02s/it]test:  22% 2/9 [00:09<00:30,  4.35s/it]test:  33% 3/9 [00:11<00:20,  3.49s/it]test:  44% 4/9 [00:14<00:15,  3.06s/it]test:  56% 5/9 [00:16<00:11,  2.82s/it]test:  67% 6/9 [00:19<00:08,  2.68s/it]test:  78% 7/9 [00:21<00:05,  2.58s/it]test:  89% 8/9 [00:24<00:02,  2.60s/it]test: 100% 9/9 [00:26<00:00,  2.53s/it]test: 100% 9/9 [00:26<00:00,  2.96s/it]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ for debugging ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+times: [3.5700008869171143, 2.4732489585876465, 2.462955951690674, 2.4108757972717285, 2.402829170227051, 2.4015886783599854, 2.3630356788635254, 2.3615477085113525, 2.386573076248169]
+mem: [6657526784, 6658726912, 6658726912, 6658726912, 6658726912, 6658726912, 6658726912, 6658726912, 6658726912]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  6658726912
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  6658726912
+test:   0% 0/9 [00:00<?, ?it/s]test:  11% 1/9 [00:03<00:31,  4.00s/it]test:  22% 2/9 [00:04<00:12,  1.85s/it]test:  33% 3/9 [00:07<00:13,  2.28s/it]test:  44% 4/9 [00:10<00:14,  2.81s/it]test:  56% 5/9 [00:13<00:11,  2.84s/it]test:  67% 6/9 [00:14<00:06,  2.29s/it]test:  78% 7/9 [00:18<00:05,  2.73s/it]test:  89% 8/9 [00:21<00:02,  2.71s/it]test: 100% 9/9 [00:23<00:00,  2.60s/it]test: 100% 9/9 [00:23<00:00,  2.62s/it]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ for debugging ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+times: [0.3594639301300049, 0.3520536422729492, 0.34663820266723633, 0.32574009895324707, 0.3345644474029541, 0.2996389865875244, 0.2950448989868164, 0.2781558036804199, 0.32167768478393555]
+mem: [2635809280, 1999843840, 1999843840, 1999843840, 1999843840, 1999843840, 1999843840, 1999843840, 1999843840]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ sd:::  [[6.40000000e+01 1.28000000e+02 2.56000000e+02 2.56000000e+02
+  6.40000000e+01 0.00000000e+00 2.53696177e+00 6.65859356e+09
+  5.21070374e-01]]
+################### Currently sampled arch: ###
+######### currently sampled random arch: [1, 2, 3, 3, 1]
+######### currently sampled arch: Time consumption: 2.5369617674085827
+######### currently sampled arch: Memory consumption: 6658593564.444445
+######### currently sampled arch: IoU: 0.521070374458037
+##### constraints satisfied ########################## arch number:  8  ##############################################################
+:############################################## arch num: 9 ########## channel vals: [4]
+############################################ row:  0 ## in_channels:  3 #### out_channels:  512
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  1999843840
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUDA VALUE WAS FALSE AS EXPECTED!, MEM:  1999843840
+test:   0% 0/9 [00:00<?, ?it/s]slurmstepd: error: *** JOB 16274383 ON a5-14 CANCELLED AT 2022-12-26T16:22:07 ***

@@ -1,0 +1,154 @@
+--------------------------------------------------------------------------
+A process has executed an operation involving a call to the
+"fork()" system call to create a child process.  Open MPI is currently
+operating in a condition that could result in memory corruption or
+other system errors; your job may hang, crash, or produce silent
+data corruption.  The use of fork() (or system() or other calls that
+create child processes) is strongly discouraged.
+
+The process that invoked fork was:
+
+  Local host:          [[54712,1],0] (PID 73002)
+
+If you are *absolutely sure* that your application will successfully
+and correctly survive a call to fork(), you may disable this warning
+by setting the mpi_warn_on_fork MCA parameter to 0.
+--------------------------------------------------------------------------
+==> loading configs from ['configs/shapenet/pvcnn/c1.py']
+/apps/eb/PyTorch/1.6.0-fosscuda-2019b-Python-3.7.4/lib/python3.7/site-packages/torch/utils/cpp_extension.py:252: UserWarning: 
+
+                               !! WARNING !!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Your compiler (c++) is not compatible with the compiler Pytorch was
+built with for this platform, which is g++ on linux. Please
+use g++ to to compile your extension. Alternatively, you may
+compile PyTorch from source using c++, and then you can also use
+c++ to compile your extension.
+
+See https://github.com/pytorch/pytorch/blob/master/CONTRIBUTING.md for help
+with compiling PyTorch from source.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+                              !! WARNING !!
+
+  platform=sys.platform))
+[seed] = 1588147245
+[deterministic] = False
+[data]
+  [num_workers] = 16
+  [num_classes] = 3
+  [num_shapes] = 1
+[dataset]
+  [func] = <class 'datasets.shapenet.ShapeNet'>
+  [root] = /scratch/fs47816/point_cloud_data/shapenetcore_partanno_segmentation_benchmark_v0_normal
+  [with_normal] = False
+  [with_one_hot_shape_id] = True
+  [normalize] = True
+  [jitter] = False
+  [num_points] = 100000
+  [split] = test
+[evaluate]
+  [fn] = <function evaluate at 0x2b2a446c1050>
+  [num_votes] = 1
+  [dataset]
+    [split] = test
+  [best_checkpoint_path] = runs/shapenet.pvcnn.c1/best.pth.tar
+  [predictions_path] = runs/shapenet.pvcnn.c1/best.predictions
+  [stats_path] = runs/shapenet.pvcnn.c1/best.eval.npy
+[train]
+  [num_epochs] = 200
+  [batch_size] = 1
+  [meters]
+    [acc/iou_{}]
+      [func] = <class 'meters.shapenet.MeterShapeNet'>
+      [num_classes] = 3
+  [metric] = acc/iou_test
+  [criterion]
+    [func] = <class 'torch.nn.modules.loss.CrossEntropyLoss'>
+  [optimizer]
+    [func] = <class 'torch.optim.adam.Adam'>
+    [lr] = 0.001
+  [scheduler]
+    [func] = <class 'torch.optim.lr_scheduler.CosineAnnealingLR'>
+    [T_max] = 200
+  [save_path] = runs/shapenet.pvcnn.c1
+[model]
+  [func] = <class 'models.shapenet.pvcnn.PVCNN'>
+  [num_classes] = 3
+  [num_shapes] = 1
+  [extra_feature_channels] = 0
+[device] = cuda
+[device_ids] = [0]
+
+==> loading dataset "[func] = <class 'datasets.shapenet.ShapeNet'>
+[root] = /scratch/fs47816/point_cloud_data/shapenetcore_partanno_segmentation_benchmark_v0_normal
+[with_normal] = False
+[with_one_hot_shape_id] = True
+[normalize] = True
+[jitter] = False
+[num_points] = 100000
+[split] = test"
+
+==> creating model "[func] = <class 'models.shapenet.pvcnn.PVCNN'>
+[num_classes] = 3
+[num_shapes] = 1
+[extra_feature_channels] = 0"
+==> loading checkpoint "runs/shapenet.pvcnn.c1/best.pth.tar"
+Mem of model in bytes:  2378300
+eval:   0% 0/9 [00:00<?, ?it/s]eval:  11% 1/9 [00:07<01:00,  7.60s/it]eval:  22% 2/9 [00:12<00:41,  5.87s/it]eval:  33% 3/9 [00:16<00:31,  5.17s/it]eval:  44% 4/9 [00:23<00:29,  5.80s/it]eval:  56% 5/9 [00:28<00:22,  5.54s/it]eval:  67% 6/9 [00:33<00:15,  5.21s/it]eval:  78% 7/9 [00:39<00:11,  5.77s/it]eval:  89% 8/9 [00:45<00:05,  5.69s/it]eval: 100% 9/9 [00:50<00:00,  5.45s/it]eval: 100% 9/9 [00:50<00:00,  5.60s/it]
+--- 2.4332916736602783 seconds ---
+************************************************************************************ output_plant/0_gt.txt
+************************************************************************************ output_plant/0_pred.txt
+************************************************************************************ output_plant/0_diff.txt
+torch.cuda.max_memory_allocated() 1536233984
+--- 0.18062448501586914 seconds ---
+************************************************************************************ output_plant/2_gt.txt
+************************************************************************************ output_plant/2_pred.txt
+************************************************************************************ output_plant/2_diff.txt
+torch.cuda.max_memory_allocated() 938945536
+--- 0.17120361328125 seconds ---
+************************************************************************************ output_plant/4_gt.txt
+************************************************************************************ output_plant/4_pred.txt
+************************************************************************************ output_plant/4_diff.txt
+torch.cuda.max_memory_allocated() 937751552
+--- 0.15609264373779297 seconds ---
+************************************************************************************ output_plant/6_gt.txt
+************************************************************************************ output_plant/6_pred.txt
+************************************************************************************ output_plant/6_diff.txt
+torch.cuda.max_memory_allocated() 938711552
+--- 0.15717053413391113 seconds ---
+************************************************************************************ output_plant/8_gt.txt
+************************************************************************************ output_plant/8_pred.txt
+************************************************************************************ output_plant/8_diff.txt
+torch.cuda.max_memory_allocated() 938711552
+--- 0.15673279762268066 seconds ---
+************************************************************************************ output_plant/10_gt.txt
+************************************************************************************ output_plant/10_pred.txt
+************************************************************************************ output_plant/10_diff.txt
+torch.cuda.max_memory_allocated() 938711552
+--- 0.16061162948608398 seconds ---
+************************************************************************************ output_plant/12_gt.txt
+************************************************************************************ output_plant/12_pred.txt
+************************************************************************************ output_plant/12_diff.txt
+torch.cuda.max_memory_allocated() 938711552
+--- 0.15578460693359375 seconds ---
+************************************************************************************ output_plant/14_gt.txt
+************************************************************************************ output_plant/14_pred.txt
+************************************************************************************ output_plant/14_diff.txt
+torch.cuda.max_memory_allocated() 938711552
+--- 0.1569976806640625 seconds ---
+************************************************************************************ output_plant/16_gt.txt
+************************************************************************************ output_plant/16_pred.txt
+************************************************************************************ output_plant/16_diff.txt
+torch.cuda.max_memory_allocated() 938711552
+clssIoU:    84.36
+meanIoU: 84.36
+shapeIoU:    84.36
+clssPrec:    87.66     88.74     97.41
+clssRecall:    91.43     85.98     96.63
+clssIoU:    81.56     77.26     94.26
+Accuracy: 94.30
+meanIoU: 84.36
+time_consumption:  [2.4332916736602783, 0.18062448501586914, 0.17120361328125, 0.15609264373779297, 0.15717053413391113, 0.15673279762268066, 0.16061162948608398, 0.15578460693359375, 0.1569976806640625]
+memory_consumption:  [1536233984, 938945536, 937751552, 938711552, 938711552, 938711552, 938711552, 938711552, 938711552]
