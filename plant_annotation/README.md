@@ -7,7 +7,7 @@ The materials in this repository is released under the [plant_3d_deep_learning T
 
 1. Download the PlantCloudSetup.msi file from [here](https://github.com/UGA-BSAIL/plant_3d_deep_learning/tree/main/plant_annotation/PlantCloud/PlantCloudSetup/Release) and run to install.
 2. After installation is completed, open the installation folder.
-4. Run PlanrCloud.exe file in installation folder.
+4. Run PlantCloud.exe file in installation folder.
 
 #### Notes
 
