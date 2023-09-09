@@ -5,10 +5,9 @@ The materials in this repository is released under the [plant_3d_deep_learning T
 
 ### Plant annotation
 
-1. Download the Setup.msi file from [here](https://github.com/UGA-BSAIL/plant_3d_deep_learning/blob/main/plant_annotation/PlantCloud/OpenGL/Setup/Debug) and run to install.
+1. Download the PlantCloudSetup.msi file from [here](https://github.com/UGA-BSAIL/plant_3d_deep_learning/tree/main/plant_annotation/PlantCloud/PlantCloudSetup/Release) and run to install.
 2. After installation is completed, open the installation folder.
-3. Replace res folder in installation folder with the res folder from git repo [here](https://github.com/UGA-BSAIL/plant_3d_deep_learning/tree/main/plant_annotation/PlantCloud/OpenGL/OpenGL).
-4. Run OpenGL.exe file in installation folder.
+4. Run PlanrCloud.exe file in installation folder.
 
 #### Notes
 
@@ -21,7 +20,7 @@ The materials in this repository is released under the [plant_3d_deep_learning T
 - Input file format is x y z r g b in text file (can be obtained from cloudcompare).
 
 #### Video tutorial
-Video tutorial for software installation and usage is [here](https://drive.google.com/file/d/116YxrP5ivbU9LdcmWAJ-AWWuQpSlz21M/view?usp=sharing).
+Video tutorial for software usage is [here](https://drive.google.com/file/d/116YxrP5ivbU9LdcmWAJ-AWWuQpSlz21M/view?usp=sharing). (Installation steps in this video are outdated)
 
 #### Feedback and inquiry:
 - Readers are encouraged to add new feature requests, bugs, improvements, comments, suggestions,and questions in issue tab.
