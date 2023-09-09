@@ -1,0 +1,47 @@
+﻿  Application.cpp
+C:\Users\farah\Work\visual_studio_projects\PlantCloud\PlantCloud\src\Application.cpp(50,35): warning C4805: '==': unsafe mix of type 'BOOL' and type 'bool' in operation
+C:\Users\farah\Work\visual_studio_projects\PlantCloud\PlantCloud\src\Application.cpp(64,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\farah\Work\visual_studio_projects\PlantCloud\PlantCloud\src\Application.cpp(74,29): warning C4018: '<': signed/unsigned mismatch
+C:\Users\farah\Work\visual_studio_projects\PlantCloud\PlantCloud\src\Application.cpp(99,35): warning C4805: '==': unsafe mix of type 'BOOL' and type 'bool' in operation
+C:\Users\farah\Work\visual_studio_projects\PlantCloud\PlantCloud\src\Application.cpp(640,35): warning C4018: '<': signed/unsigned mismatch
+C:\Users\farah\Work\visual_studio_projects\PlantCloud\PlantCloud\src\Application.cpp(856,35): warning C4018: '<': signed/unsigned mismatch
+C:\Users\farah\Work\visual_studio_projects\PlantCloud\PlantCloud\src\Application.cpp(857,26): warning C4101: 'integer_string': unreferenced local variable
+  Application_orig.cpp
+  BBox.cpp
+  Icosphere.cpp
+C:\Users\farah\Work\visual_studio_projects\PlantCloud\PlantCloud\src\Icosphere.cpp(197,26): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\farah\Work\visual_studio_projects\PlantCloud\PlantCloud\src\Icosphere.cpp(197,20): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+  IndexBuffer.cpp
+  PointCloud.cpp
+C:\Users\farah\Work\visual_studio_projects\PlantCloud\PlantCloud\src\PointCloud.cpp(138,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\farah\Work\visual_studio_projects\PlantCloud\PlantCloud\src\PointCloud.cpp(147,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\farah\Work\visual_studio_projects\PlantCloud\PlantCloud\src\PointCloud.cpp(160,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\farah\Work\visual_studio_projects\PlantCloud\PlantCloud\src\PointCloud.cpp(164,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\farah\Work\visual_studio_projects\PlantCloud\PlantCloud\src\PointCloud.cpp(186,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\farah\Work\visual_studio_projects\PlantCloud\PlantCloud\src\PointCloud.cpp(191,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\farah\Work\visual_studio_projects\PlantCloud\PlantCloud\src\PointCloud.cpp(211,20): warning C4018: '<': signed/unsigned mismatch
+  Renderer.cpp
+C:\Users\farah\Work\visual_studio_projects\PlantCloud\PlantCloud\src\Renderer.cpp(21,30): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Shader.cpp
+  Sphere.cpp
+  Texture.cpp
+  glm.cpp
+  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_glfw.cpp
+  imgui_impl_opengl3.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  stb_image.cpp
+  VertexArray.cpp
+  Compiling...
+  VertexBuffer.cpp
+  tinyfiledialogs.c
+  Previous IPDB not found, fall back to full compilation.
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Generating code
+  All 2763 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+glew32s.lib(glew.obj) : warning LNK4099: PDB '' was not found with 'glew32s.lib(glew.obj)' or at ''; linking object as if no debug info
+  PlantCloud.vcxproj -> C:\Users\farah\Work\visual_studio_projects\PlantCloud\PlantCloud\Release\PlantCloud.exe
